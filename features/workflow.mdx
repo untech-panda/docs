@@ -1,0 +1,332 @@
+---
+title: 'Order Editing Workflow'
+description: 'Understanding the complete order editing process from customer perspective to fulfillment integration.'
+---
+
+## Complete Workflow Overview
+
+The Revize order editing workflow is designed to be seamless for customers while maintaining business control and integration with your existing systems.
+
+<Steps>
+<Step title="Order Placed">
+Customer completes checkout on your Shopify store.
+- Order is created in Shopify
+- Revize automatically puts order "on hold"
+- Edit window begins (configurable duration)
+</Step>
+
+<Step title="Customer Notification">
+Customer receives order confirmation with editing options.
+- Email includes edit link and time limit
+- Thank you page shows edit button
+- Customer account displays edit option
+</Step>
+
+<Step title="Editing Window Active">
+Customer can access and modify their order.
+- Real-time inventory checking
+- Automatic payment processing
+- Live shipping calculations
+- Smart upsell suggestions
+</Step>
+
+<Step title="Changes Applied">
+All modifications are processed automatically.
+- Payment adjustments completed
+- Inventory levels updated
+- New confirmation email sent
+- 3PL systems notified
+</Step>
+
+<Step title="Edit Window Closes">
+After the time limit, editing is disabled.
+- Order released from hold
+- Fulfillment process begins
+- Standard Shopify workflow resumes
+</Step>
+</Steps>
+
+## Technical Process Flow
+
+<Tabs>
+<Tab title="Order Creation">
+```mermaid
+graph TD
+    A[Customer Checkout] → B[Order Created]
+    B → C[Revize Webhook Triggered]
+    C → D[Order Put on Hold]
+    D → E[Edit Window Started]
+    E → F[Customer Notification Sent]
+```
+
+**What happens:**
+- Shopify webhook triggers Revize
+- Order status set to "on hold"
+- Timer starts for edit window
+- Customer gets edit access
+</Tab>
+
+<Tab title="Editing Process">
+```mermaid
+graph TD
+    A[Customer Accesses Edit] → B[Load Current Order]
+    B → C[Display Edit Options]
+    C → D[Customer Makes Changes]
+    D → E[Validate Changes]
+    E → F[Process Payments]
+    F → G[Update Order]
+    G → H[Send Confirmation]
+```
+
+**What happens:**
+- Real-time validation of changes
+- Automatic payment processing
+- Inventory reservation updates
+- Order modifications applied
+</Tab>
+
+<Tab title="Completion">
+```mermaid
+graph TD
+    A[Edit Window Expires] → B[Remove Hold Status]
+    B → C[Release to Fulfillment]
+    C → D[Notify 3PL Partners]
+    D → E[Standard Processing]
+```
+
+**What happens:**
+- Order released from editing
+- Fulfillment partners notified
+- Normal shipping process begins
+- Tracking information generated
+</Tab>
+</Tabs>
+
+## Customer Experience Journey
+
+### 1. Initial Order Placement
+<Frame>
+  <img src="/images/hero-light.png" alt="Shopify checkout process" style={{ borderRadius: '0.5rem' }} />
+</Frame>
+
+**Customer sees:**
+- Standard Shopify checkout
+- Order confirmation page
+- Notice about editing availability
+- Clear time limit information
+
+### 2. Edit Access Points
+
+<AccordionGroup>
+<Accordion title="Email Notification" icon="envelope">
+**Order confirmation email includes:**
+- "Edit Your Order" button
+- Time remaining display
+- Direct link to editing interface
+- Support contact information
+</Accordion>
+
+<Accordion title="Customer Account" icon="user">
+**In customer account portal:**
+- "Edit" button next to recent orders
+- Edit status and time remaining
+- Order history with edit logs
+- Easy access to edit interface
+</Accordion>
+
+<Accordion title="Thank You Page" icon="check">
+**Post-checkout page shows:**
+- Order summary
+- Edit availability notice
+- One-click edit access
+- Time limit countdown
+</Accordion>
+</AccordionGroup>
+
+### 3. Editing Interface
+
+<Info>
+The editing interface is mobile-responsive and matches your store's branding.
+</Info>
+
+**Features include:**
+- Clean, intuitive design
+- Real-time price updates
+- Inventory availability checks
+- Multiple payment options
+- Progress saving (for longer edits)
+
+### 4. Change Confirmation
+
+**Before finalizing changes:**
+- Summary of all modifications
+- Price difference breakdown
+- Shipping cost adjustments
+- Payment method confirmation
+- Final approval required
+
+## Business Logic & Rules
+
+### Inventory Management
+
+<Warning>
+Inventory is reserved during the editing window to prevent overselling.
+</Warning>
+
+**Reservation Process:**
+1. Items reserved when order placed
+2. Additional reservations for increases
+3. Releases for quantity decreases
+4. Auto-release when window expires
+
+### Payment Processing
+
+<Tabs>
+<Tab title="Price Increases">
+**When order total increases:**
+- Charge difference to original payment method
+- Backup payment methods if primary fails
+- Customer notification for payment issues
+- Order hold if payment cannot be processed
+</Tab>
+
+<Tab title="Price Decreases">
+**When order total decreases:**
+- Automatic refund to original payment method
+- Refund processing within 3-5 business days
+- Email confirmation of refund amount
+- Updated receipt provided
+</Tab>
+
+<Tab title="Payment Failures">
+**If payment processing fails:**
+- Customer immediately notified
+- Alternative payment options provided
+- Order held until payment resolved
+- Support team automatically alerted
+</Tab>
+</Tabs>
+
+### Shipping Calculations
+
+**Real-time updates for:**
+- Address changes affecting zones
+- Weight/size changes from products
+- Shipping method upgrades/downgrades
+- Express shipping availability
+- Free shipping threshold impacts
+
+## Integration Workflows
+
+### 3PL & Fulfillment Partners
+
+<AccordionGroup>
+<Accordion title="ShipBob Integration" icon="truck">
+- Real-time inventory sync
+- Automatic hold/release notifications
+- Updated shipping preferences
+- Modified packing instructions
+</Accordion>
+
+<Accordion title="ShipStation Integration" icon="ship">
+- Order modification webhooks
+- Updated shipping labels
+- Tracking number management
+- Batch processing optimization
+</Accordion>
+
+<Accordion title="Custom 3PL APIs" icon="code">
+- Webhook-based notifications
+- API endpoint for order updates
+- Custom field mapping
+- Error handling and retries
+</Accordion>
+</AccordionGroup>
+
+### ERP System Integration
+
+**NetSuite Example:**
+1. Order modifications sync to NetSuite
+2. Inventory levels updated automatically
+3. Financial records adjusted
+4. Fulfillment orders updated
+
+## Error Handling & Edge Cases
+
+<Tabs>
+<Tab title="Inventory Issues">
+**When requested items unavailable:**
+- Real-time inventory checking
+- Automatic alternatives suggested
+- Customer notified immediately
+- Graceful degradation to available options
+</Tab>
+
+<Tab title="Payment Problems">
+**Payment processing failures:**
+- Multiple retry attempts
+- Alternative payment methods
+- Customer support escalation
+- Order hold with clear communication
+</Tab>
+
+<Tab title="System Outages">
+**During maintenance or issues:**
+- Graceful error messages
+- Edit window extensions
+- Customer notification
+- Automatic recovery processes
+</Tab>
+</Tabs>
+
+## Performance & Scalability
+
+<Info>
+Revize is built to handle high-volume stores with thousands of daily orders.
+</Info>
+
+**Performance features:**
+- Sub-second response times
+- Automatic scaling during traffic spikes
+- Redundant system architecture
+- 99.9% uptime guarantee
+
+## Monitoring & Analytics
+
+### Store Owner Dashboard
+- Edit completion rates
+- Common modification types
+- Customer satisfaction scores
+- Revenue impact analysis
+
+### Customer Insights
+- Edit usage patterns
+- Popular modification types
+- Time-to-edit analytics
+- Support ticket reduction metrics
+
+## Next Steps
+
+<CardGroup cols={3}>
+  <Card
+    title="Configure Workflow"
+    icon="cog"
+    href="/setup/edit-options"
+  >
+    Customize the editing process
+  </Card>
+  <Card
+    title="Test End-to-End"
+    icon="flask"
+    href="/testing/order-flow"
+  >
+    Validate the complete workflow
+  </Card>
+  <Card
+    title="Setup Integrations"
+    icon="plug"
+    href="/features/integrations"
+  >
+    Connect your systems
+  </Card>
+</CardGroup>

@@ -1,80 +1,130 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: 'Quick Setup Guide'
+description: 'Get Revize installed and configured on your Shopify store in just a few minutes.'
 ---
 
-## Get started in three steps
+<Info>
+  **Prerequisites**:
+  - Active Shopify store
+  - Store admin access
+  - Basic familiarity with Shopify admin panel
+</Info>
 
-Get your documentation site running locally and make your first customization.
+## Install Revize in 3 Easy Steps
 
-### Step 1: Set up your local environment
+Get your order editing system up and running quickly with this streamlined setup process.
+
+<Steps>
+<Step title="Install from Shopify App Store">
+
+Visit the [Revize app listing](https://apps.shopify.com/revize) in the Shopify App Store and click **"Add app"**.
+
+<Frame>
+  <img src="/images/checks-passed.png" alt="Shopify App Store installation" style={{ borderRadius: '0.5rem' }} />
+</Frame>
+
+The app will automatically integrate with your store's order system.
+
+</Step>
+
+<Step title="Configure Basic Settings">
+
+Once installed, you'll be redirected to the Revize dashboard where you can configure:
 
 <AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
+  <Accordion title="Set Order Edit Time Limits" icon="clock">
+    - Choose how long customers have to edit orders (default: 30 minutes)
+    - Set different limits for different customer segments if needed
+    - Configure timezone settings for global stores
   </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
+  
+  <Accordion title="Configure Refund Options" icon="credit-card">
+    - Enable automatic refunds for removed items
+    - Set refund processing preferences
+    - Configure partial refund handling
+  </Accordion>
+  
+  <Accordion title="Choose Edit Options" icon="edit">
+    - Allow address changes
+    - Enable product swapping
+    - Set quantity change limits
+    - Configure upsell opportunities
   </Accordion>
 </AccordionGroup>
 
-### Step 2: Deploy your changes
+</Step>
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+<Step title="Add to Your Store">
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+Complete the integration by adding Revize to your customer experience:
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+1. **Email Integration**: Revize automatically adds edit links to order confirmation emails
+2. **Thank You Page**: The edit option appears on post-checkout pages
+3. **Customer Portal**: Links are available in customer accounts
 
-### Step 3: Go live
+<Tip>Test the setup using Shopify's draft order feature before going live!</Tip>
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+</Step>
+</Steps>
 
-## Next steps
+## Verify Your Setup
 
-Now that you have your docs running, explore these key features:
+<Warning>
+Always test your configuration before enabling for all customers.
+</Warning>
 
 <CardGroup cols={2}>
+  <Card
+    title="Test with Draft Orders"
+    icon="flask"
+    href="/testing/draft-orders"
+  >
+    Learn how to safely test order editing
+  </Card>
+  <Card
+    title="Understand Order Flow"
+    icon="flow"
+    href="/testing/order-flow"
+  >
+    See how the editing process works
+  </Card>
+</CardGroup>
 
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
+## What Happens Next?
 
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
+Once installed, Revize will:
 
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
+1. **Hold New Orders**: Orders are automatically put on hold for the configured time period
+2. **Send Edit Links**: Customers receive editing options via email and account portal
+3. **Process Changes**: Customer modifications are applied in real-time
+4. **Release Orders**: After the edit window closes, orders proceed to fulfillment
 
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
+## Next Steps
 
+<CardGroup cols={3}>
+  <Card
+    title="Configure Time Limits"
+    icon="stopwatch"
+    href="/setup/time-limits"
+  >
+    Fine-tune editing windows
+  </Card>
+  <Card
+    title="Setup Integrations"
+    icon="plug"
+    href="/features/integrations"
+  >
+    Connect your 3PL and tools
+  </Card>
+  <Card
+    title="Customize Experience"
+    icon="palette"
+    href="/customization/text-translations"
+  >
+    Match your brand voice
+  </Card>
 </CardGroup>
 
 <Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
+  **Need help?** Contact our support team at [support@revize.app](mailto:support@revize.app) or check our [FAQ section](/support/faq).
 </Note>

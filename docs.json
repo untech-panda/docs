@@ -1,68 +1,69 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Revize Documentation",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#6366F1",
+    "light": "#8B5CF6",
+    "dark": "#4F46E5"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
               "index",
               "quickstart",
-              "development"
+              "installation"
+            ]
+          },
+          {
+            "group": "Setup & Configuration",
+            "pages": [
+              "setup/time-limits",
+              "setup/refunds",
+              "setup/edit-options",
+              "setup/store-integration"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "features/order-editing",
+              "features/workflow",
+              "features/integrations"
             ]
           },
           {
             "group": "Customization",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "customization/text-translations",
+              "customization/notifications"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Testing & Troubleshooting",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "testing/draft-orders",
+              "testing/order-flow",
+              "troubleshooting/common-issues"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Support",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Help & FAQ",
             "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "support/faq",
+              "support/billing",
+              "support/refund-policy"
             ]
           }
         ]
@@ -71,19 +72,19 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Shopify App Store",
+          "href": "https://apps.shopify.com/revize",
+          "icon": "shopping-cart"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "anchor": "Support",
+          "href": "mailto:support@revize.app",
+          "icon": "envelope"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Dashboard",
+          "href": "https://app.revize.com",
+          "icon": "chart-line"
         }
       ]
     }
@@ -96,13 +97,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@revize.app"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Get Started",
+      "href": "https://apps.shopify.com/revize"
     }
   },
   "contextual": {
@@ -119,9 +120,8 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/revizeapp",
+      "linkedin": "https://linkedin.com/company/revize"
     }
   }
 }

@@ -1,0 +1,339 @@
+---
+title: 'Configure Order Edit Time Limits'
+description: 'Set optimal time windows for customer order editing to balance flexibility with operational efficiency.'
+---
+
+## Overview
+
+Time limits control how long customers have to edit their orders after checkout. The right balance ensures customers have enough flexibility while maintaining efficient fulfillment operations.
+
+<Info>
+**Default Setting**: 30 minutes after order placement. This works well for most stores but can be customized based on your specific needs.
+</Info>
+
+## Recommended Time Limits by Business Type
+
+<Tabs>
+<Tab title="Fashion & Apparel">
+**Recommended**: 1-2 hours
+- Customers often need time to consult others
+- Size/color changes are common
+- Seasonal considerations for gift purchases
+- Higher likelihood of buyer's remorse
+</Tab>
+
+<Tab title="Electronics">
+**Recommended**: 15-30 minutes  
+- Fast fulfillment expectations
+- Technical specifications rarely change
+- Lower chance of modification needs
+- Quick inventory turnover
+</Tab>
+
+<Tab title="Home & Garden">
+**Recommended**: 2-4 hours
+- Large purchase decisions
+- Measurement verification needs
+- Color coordination considerations
+- Seasonal project planning
+</Tab>
+
+<Tab title="Gifts & Personalized">
+**Recommended**: 30 minutes - 1 hour
+- Personalization errors need correction
+- Shipping address changes for gifts
+- Quick decision turnaround needed
+- Prevent production delays
+</Tab>
+</Tabs>
+
+## Configuration Options
+
+### Basic Time Settings
+
+<Steps>
+<Step title="Access Time Settings">
+1. Open your Revize dashboard
+2. Navigate to **Settings** → **Edit Windows**
+3. Find the **Default Time Limit** section
+</Step>
+
+<Step title="Set Global Default">
+Configure the default time limit that applies to all orders:
+- **Minimum**: 5 minutes
+- **Maximum**: 24 hours  
+- **Recommended**: 30 minutes - 2 hours
+- **Format**: Minutes or hours
+</Step>
+
+<Step title="Test Your Settings">
+Create a draft order to verify the time limit works as expected before applying to live orders.
+</Step>
+</Steps>
+
+### Advanced Time Rules
+
+<AccordionGroup>
+<Accordion title="Customer Segment Rules" icon="users">
+Set different time limits based on customer characteristics:
+
+**VIP Customers**: Extended time (up to 4 hours)
+- Loyalty program members
+- High-value customers  
+- Repeat buyers
+
+**New Customers**: Standard time (30 minutes)
+- First-time buyers
+- Unverified accounts
+- Risk management
+
+**Wholesale Customers**: Extended time (24 hours)
+- Business accounts
+- Bulk orders
+- Complex approval processes
+</Accordion>
+
+<Accordion title="Product Category Rules" icon="tags">
+Different products may need different edit windows:
+
+**Custom/Personalized Items**: Short window (15 minutes)
+- Prevents production delays
+- Reduces waste from changes
+- Clear expectations
+
+**Standard Products**: Standard window (30 minutes)
+- Regular inventory items
+- Quick fulfillment
+
+**Pre-order Items**: Extended window (up to 24 hours)
+- No immediate fulfillment pressure
+- More flexibility for customers
+</Accordion>
+
+<Accordion title="Order Value Rules" icon="dollar-sign">
+Adjust time limits based on order amount:
+
+**High-Value Orders** ($500+): Extended time (2-4 hours)
+- More consideration time
+- Reduced buyer's remorse
+- Better customer experience
+
+**Standard Orders**: Normal time (30 minutes)
+- Efficient processing
+- Quick turnaround
+
+**Small Orders** (under $50): Shorter time (15 minutes)
+- Fast fulfillment
+- Minimal complexity
+</Accordion>
+
+<Accordion title="Geographic Rules" icon="globe">
+Time zones and regions may affect optimal windows:
+
+**International Orders**: Extended time (2-4 hours)
+- Time zone considerations
+- Complex shipping calculations
+- Currency conversion time
+
+**Domestic Orders**: Standard time (30 minutes)
+- Familiar shipping options
+- Local time zones
+
+**Express Shipping**: Reduced time (15 minutes)
+- Customer expects speed
+- Quick decision needed
+</Accordion>
+</AccordionGroup>
+
+## Time Zone Considerations
+
+<Warning>
+Ensure your time limits account for customer time zones to provide consistent experience globally.
+</Warning>
+
+### Configuration Options
+
+**Store Time Zone** (Default)
+- Uses your store's configured time zone
+- Simple for single-region stores
+- May confuse international customers
+
+**Customer Time Zone** (Recommended)
+- Automatically detects customer location
+- Provides consistent experience
+- Better for international stores
+
+**UTC/GMT** (Advanced)
+- Universal time standard
+- Good for global operations
+- Requires customer education
+
+## Dynamic Time Extensions
+
+### Automatic Extensions
+
+<AccordionGroup>
+<Accordion title="Technical Issues" icon="exclamation-triangle">
+**When to extend automatically:**
+- Payment processing delays
+- Website performance issues
+- Third-party service outages
+- API timeouts or errors
+
+**Extension length**: Usually 15-30 minutes
+</Accordion>
+
+<Accordion title="Inventory Conflicts" icon="boxes">
+**When items become unavailable:**
+- Out of stock situations
+- Variant unavailability  
+- Shipping restrictions discovered
+- Price changes occurring
+
+**Extension length**: Time needed to resolve issue
+</Accordion>
+</AccordionGroup>
+
+### Manual Extensions
+
+Store administrators can manually extend edit windows for specific situations:
+- Customer service requests
+- Special circumstances
+- VIP customer accommodation  
+- Error corrections needed
+
+## Optimization Strategies
+
+### A/B Testing Time Limits
+
+<Tabs>
+<Tab title="Test Setup">
+**Split test different time limits:**
+- Group A: 15 minutes
+- Group B: 30 minutes  
+- Group C: 1 hour
+- Group D: 2 hours
+
+**Metrics to track:**
+- Edit completion rates
+- Customer satisfaction
+- Support ticket volume
+- Fulfillment efficiency
+</Tab>
+
+<Tab title="Data Analysis">
+**Key performance indicators:**
+- **Edit utilization**: % of customers who edit
+- **Completion rate**: % who complete edits
+- **Support reduction**: Ticket volume decrease
+- **Revenue impact**: Upsell/cross-sell success
+- **Fulfillment time**: Impact on shipping speed
+</Tab>
+</Tabs>
+
+### Seasonal Adjustments
+
+<AccordionGroup>
+<Accordion title="Holiday Seasons" icon="gift">
+**Recommended adjustments:**
+- **Black Friday/Cyber Monday**: Reduce to 15 minutes (high volume)
+- **Christmas period**: Extend to 2-4 hours (gift considerations)
+- **Valentine's Day**: Extend to 1-2 hours (last-minute changes)
+- **Back-to-school**: Standard 30 minutes (quick decisions)
+</Accordion>
+
+<Accordion title="Sales Events" icon="percent">
+**Flash sales**: 5-15 minutes
+- Creates urgency
+- Prevents inventory issues
+- Maintains sale integrity
+
+**Clearance events**: 30 minutes - 1 hour
+- Standard processing time
+- Allow consideration for final sales
+</Accordion>
+</AccordionGroup>
+
+## Monitoring & Analytics
+
+### Time Limit Performance Metrics
+
+<CardGroup cols={2}>
+  <Card title="Utilization Rate" icon="chart-line">
+    Percentage of customers who use edit functionality within time limits
+  </Card>
+  <Card title="Completion Rate" icon="check-circle">
+    Percentage of edit sessions that result in successful changes
+  </Card>
+  <Card title="Extension Requests" icon="clock">
+    How often customers request additional time
+  </Card>
+  <Card title="Support Impact" icon="headset">
+    Reduction in time-related support tickets
+  </Card>
+</CardGroup>
+
+### Optimization Recommendations
+
+**Weekly Review Process:**
+1. Analyze edit completion rates
+2. Review customer feedback
+3. Check support ticket trends
+4. Adjust time limits as needed
+5. Document changes and results
+
+## Best Practices
+
+<AccordionGroup>
+<Accordion title="Communication" icon="bullhorn">
+**Always clearly communicate time limits:**
+- In order confirmation emails
+- On thank you pages
+- In customer accounts
+- With countdown timers
+- Through reminder notifications
+</Accordion>
+
+<Accordion title="Flexibility" icon="arrows-alt">
+**Build in reasonable flexibility:**
+- Allow support team to extend when appropriate
+- Consider automatic extensions for technical issues
+- Provide clear escalation paths
+- Document exception procedures
+</Accordion>
+
+<Accordion title="Testing" icon="flask">
+**Regularly test your settings:**
+- Use draft orders for testing
+- Monitor customer feedback
+- Track completion rates
+- Adjust based on data
+- Seasonal optimization
+</Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={3}>
+  <Card
+    title="Configure Refund Settings"
+    icon="money-bill-wave"
+    href="/setup/refunds"
+  >
+    Set up automatic refund processing
+  </Card>
+  <Card
+    title="Test Time Limits"
+    icon="flask"
+    href="/testing/draft-orders"
+  >
+    Verify your time settings work correctly
+  </Card>
+  <Card
+    title="Monitor Performance"
+    icon="chart-bar"
+    href="/support/faq"
+  >
+    Track how time limits affect your business
+  </Card>
+</CardGroup>
