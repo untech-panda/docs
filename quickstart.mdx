@@ -1,130 +1,120 @@
 ---
-title: 'Quick Setup Guide'
-description: 'Get Revize installed and configured on your Shopify store in just a few minutes.'
+title: 'Get Started in Under 5 Minutes'
+description: 'Install Revize and configure order editing in 4 simple steps. Your customers will be editing orders in minutes.'
 ---
 
 <Info>
-  **Prerequisites**:
-  - Active Shopify store
-  - Store admin access
-  - Basic familiarity with Shopify admin panel
+**Before you start**: Make sure you have admin access to your Shopify store and have installed Revize from the [Shopify App Store](https://apps.shopify.com/revize).
 </Info>
 
-## Install Revize in 3 Easy Steps
+# Quick Setup Guide
 
-Get your order editing system up and running quickly with this streamlined setup process.
+Get order editing live on your store in under 5 minutes with these 4 essential configurations.
 
 <Steps>
-<Step title="Install from Shopify App Store">
-
-Visit the [Revize app listing](https://apps.shopify.com/revize) in the Shopify App Store and click **"Add app"**.
-
-<Frame>
-  <img src="/images/checks-passed.png" alt="Shopify App Store installation" style={{ borderRadius: '0.5rem' }} />
-</Frame>
-
-The app will automatically integrate with your store's order system.
-
-</Step>
-
-<Step title="Configure Basic Settings">
-
-Once installed, you'll be redirected to the Revize dashboard where you can configure:
-
-<AccordionGroup>
-  <Accordion title="Set Order Edit Time Limits" icon="clock">
-    - Choose how long customers have to edit orders (default: 30 minutes)
-    - Set different limits for different customer segments if needed
-    - Configure timezone settings for global stores
-  </Accordion>
+  <Step title="Set Order Editing Deadline">
+    **Choose how long customers can edit their orders**
+    
+    - **30 minutes** (recommended for most stores)
+    - **Until fulfillment** (flexible but requires manual oversight)
+    - **Custom timeframe** (2 hours, 24 hours, etc.)
+    
+    <Tip>
+    Start with 30 minutes - it gives customers time to catch mistakes without delaying fulfillment.
+    </Tip>
+  </Step>
   
-  <Accordion title="Configure Refund Options" icon="credit-card">
-    - Enable automatic refunds for removed items
-    - Set refund processing preferences
-    - Configure partial refund handling
-  </Accordion>
+  <Step title="Configure Order Hold Settings">
+    **Choose how orders are processed during editing**
+    
+    <Tabs>
+      <Tab title="Hold Orders (Recommended)" icon="pause">
+        Orders automatically pause for editing, then release to fulfillment. Works seamlessly with all 3PLs.
+      </Tab>
+      <Tab title="Skip Order Hold" icon="tag">
+        Orders process immediately. Revize adds tags when editing ends for 3PL pickup. *Requires deeper integration.*
+      </Tab>
+    </Tabs>
+    
+    <Warning>
+    Order hold is recommended - it prevents fulfillment conflicts and works with any system.
+    </Warning>
+  </Step>
   
-  <Accordion title="Choose Edit Options" icon="edit">
-    - Allow address changes
-    - Enable product swapping
-    - Set quantity change limits
-    - Configure upsell opportunities
-  </Accordion>
-</AccordionGroup>
-
-</Step>
-
-<Step title="Add to Your Store">
-
-Complete the integration by adding Revize to your customer experience:
-
-1. **Email Integration**: Revize automatically adds edit links to order confirmation emails
-2. **Thank You Page**: The edit option appears on post-checkout pages
-3. **Customer Portal**: Links are available in customer accounts
-
-<Tip>Test the setup using Shopify's draft order feature before going live!</Tip>
-
-</Step>
+  <Step title="Set Refund Methods">
+    **Control how refunds work when customers reduce order value**
+    
+    <CardGroup cols={3}>
+      <Card title="No Refunds" icon="x" color="#ef4444">
+        Customers can't reduce order value. No refunds processed.
+      </Card>
+      <Card title="Original Payment" icon="credit-card" color="#10b981">
+        Refunds go back to customer's payment method.
+      </Card>
+      <Card title="Store Credit" icon="gift" color="#8b5cf6">
+        Refunds become store credit to encourage return visits.
+      </Card>
+    </CardGroup>
+  </Step>
+  
+  <Step title="Choose What Customers Can Edit">
+    **Enable the editing options that make sense for your business**
+    
+    <AccordionGroup>
+      <Accordion title="Address & Contact" icon="truck">
+        - ✅ Edit shipping address
+        - ✅ Update contact info
+        - ✅ Add preferred delivery date
+      </Accordion>
+      
+      <Accordion title="Products & Quantities" icon="package">
+        - ✅ Change variant (size, color, style)
+        - ✅ Adjust quantities
+        - ✅ Add products (upsells)
+        - ✅ Replace products
+      </Accordion>
+      
+      <Accordion title="Orders & Support" icon="settings">
+        - ✅ Edit tax invoice
+        - ✅ Contact customer support
+        - ✅ Upgrade shipping methods
+        - ✅ Cancel order
+      </Accordion>
+    </AccordionGroup>
+    
+    <Note>
+    You can enable/disable any feature. Most stores start with address changes and product swaps.
+    </Note>
+  </Step>
 </Steps>
 
-## Verify Your Setup
-
-<Warning>
-Always test your configuration before enabling for all customers.
-</Warning>
+## You're Done! 
 
 <CardGroup cols={2}>
-  <Card
-    title="Test with Draft Orders"
-    icon="flask"
-    href="/testing/draft-orders"
-  >
-    Learn how to safely test order editing
+  <Card title="Test Your Setup" icon="flask" href="/testing/draft-orders">
+    Create a test order to see editing in action
   </Card>
-  <Card
-    title="Understand Order Flow"
-    icon="flow"
-    href="/testing/order-flow"
-  >
-    See how the editing process works
+  <Card title="View All Features" icon="list" href="/features/order-editing">
+    Explore advanced configuration options
   </Card>
 </CardGroup>
 
-## What Happens Next?
+<Check>
+**What happens next?** New orders will automatically follow your configuration. Customers get edit links in confirmation emails and can access editing from their order status page.
+</Check>
 
-Once installed, Revize will:
+---
 
-1. **Hold New Orders**: Orders are automatically put on hold for the configured time period
-2. **Send Edit Links**: Customers receive editing options via email and account portal
-3. **Process Changes**: Customer modifications are applied in real-time
-4. **Release Orders**: After the edit window closes, orders proceed to fulfillment
-
-## Next Steps
+## Need Help?
 
 <CardGroup cols={3}>
-  <Card
-    title="Configure Time Limits"
-    icon="stopwatch"
-    href="/setup/time-limits"
-  >
-    Fine-tune editing windows
+  <Card title="Test with Draft Orders" icon="test-tube" href="/testing/draft-orders">
+    Safe testing before going live
   </Card>
-  <Card
-    title="Setup Integrations"
-    icon="plug"
-    href="/features/integrations"
-  >
-    Connect your 3PL and tools
+  <Card title="Advanced Settings" icon="gear" href="/setup/time-limits">
+    Fine-tune your configuration
   </Card>
-  <Card
-    title="Customize Experience"
-    icon="palette"
-    href="/customization/text-translations"
-  >
-    Match your brand voice
+  <Card title="Get Support" icon="headset" href="/support/faq">
+    Questions? We're here to help
   </Card>
 </CardGroup>
-
-<Note>
-  **Need help?** Contact our support team at [support@revize.app](mailto:support@revize.app) or check our [FAQ section](/support/faq).
-</Note>
