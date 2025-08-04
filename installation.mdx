@@ -1,156 +1,195 @@
 ---
-title: 'Installation & Requirements'
-description: 'Complete installation guide and system requirements for Revize order editing app.'
+title: 'Testing Your Setup'
+description: 'How to safely test Revize order editing before going live with real customers.'
 ---
 
-## System Requirements
-
 <Info>
-Revize is compatible with all Shopify plans and most themes. No coding required.
+Always test your Revize configuration before enabling it for live customers. This ensures everything works perfectly with your store setup.
 </Info>
 
-### Shopify Compatibility
-- **Shopify Plans**: Works with Basic, Shopify, and Advanced plans
-- **Shopify Plus**: Full compatibility with enterprise features
-- **Theme Support**: Compatible with all standard Shopify themes
-- **Custom Themes**: May require minor adjustments for optimal display
+# Test Order Editing Setup
 
-### Required Permissions
-When installing Revize, you'll grant the following permissions:
-- **Orders**: Read and modify order information
-- **Products**: Access product data for editing options
-- **Customers**: Access customer information for personalization
-- **Store Settings**: Configure app settings within your store
+Verify your Revize configuration works correctly with these safe testing methods.
 
-## Installation Process
+## Testing with Draft Orders
 
 <Steps>
-<Step title="Access Shopify App Store">
-1. Log into your Shopify admin panel
-2. Navigate to **Apps** in the main menu
-3. Click **Visit Shopify App Store**
-4. Search for "Revize" or visit our [direct link](https://apps.shopify.com/revize)
-</Step>
-
-<Step title="Install the App">
-1. Click **"Add app"** on the Revize listing page
-2. Review the app permissions and click **"Install app"**
-3. Wait for the installation to complete (usually 30-60 seconds)
-4. You'll be redirected to the Revize setup dashboard
-</Step>
-
-<Step title="Complete Initial Setup">
-The setup wizard will guide you through:
-- Basic configuration settings
-- Time limit preferences
-- Email notification setup
-- Integration options
-
-<Tip>You can always modify these settings later from the Revize dashboard.</Tip>
-</Step>
+  <Step title="Create a Draft Order">
+    **Set up a test order in Shopify Admin**
+    
+    1. Go to **Orders** → **Create order** in your Shopify admin
+    2. Add yourself as the customer (use your email)
+    3. Add 2-3 different products to test editing options
+    4. Set shipping address and method
+    5. **Save as draft** (don't process payment yet)
+  </Step>
+  
+  <Step title="Convert to Real Order">
+    **Process the draft order**
+    
+    1. Click **Send invoice** to customer (yourself)
+    2. Complete the test purchase using a test payment method
+    3. Check that the order appears in your orders list
+    4. Verify the order status shows as "Paid"
+  </Step>
+  
+  <Step title="Test Customer Editing">
+    **Access the order as a customer would**
+    
+    1. Check your email for the order confirmation
+    2. Click the **Order Status** link in the email
+    3. Look for the Revize editing blocks you configured
+    4. Test editing features: address changes, quantity adjustments, etc.
+    5. Verify changes save correctly and reflect in Shopify admin
+  </Step>
 </Steps>
 
-## Post-Installation Checklist
+## What to Test
 
 <AccordionGroup>
-<Accordion title="Verify App Installation" icon="check-circle">
-- [ ] Revize appears in your Apps section
-- [ ] Dashboard loads without errors
-- [ ] Settings are accessible
-- [ ] Test order creation works
-</Accordion>
-
-<Accordion title="Configure Basic Settings" icon="cog">
-- [ ] Set order edit time limits
-- [ ] Configure refund options
-- [ ] Choose allowed edit types
-- [ ] Set up email notifications
-</Accordion>
-
-<Accordion title="Test Order Flow" icon="flask">
-- [ ] Create a draft order for testing
-- [ ] Verify edit links appear in emails
-- [ ] Test the customer editing experience
-- [ ] Confirm changes are processed correctly
-</Accordion>
+  <Accordion title="Core Editing Functions" icon="edit">
+    **Test these essential features:**
+    
+    - ✅ **Address editing**: Change shipping address, verify validation
+    - ✅ **Quantity changes**: Increase/decrease product quantities
+    - ✅ **Variant swapping**: Change size, color, or style options
+    - ✅ **Product additions**: Add new items to the order
+    - ✅ **Order cancellation**: Cancel order and verify refund process
+  </Accordion>
+  
+  <Accordion title="Time Window Behavior" icon="clock">
+    **Verify editing deadlines work correctly:**
+    
+    - ✅ **Within time limit**: Editing options are available
+    - ✅ **After deadline**: Editing becomes unavailable
+    - ✅ **Order processing**: Orders release to fulfillment correctly
+    - ✅ **Hold behavior**: Orders pause/resume as configured
+  </Accordion>
+  
+  <Accordion title="Email & Notifications" icon="envelope">
+    **Check customer communication:**
+    
+    - ✅ **Order confirmation**: Contains edit links and instructions
+    - ✅ **Edit confirmations**: Customers receive update notifications
+    - ✅ **Deadline reminders**: Time-based notifications (if enabled)
+    - ✅ **Support routing**: Test tickets reach the right email
+  </Accordion>
+  
+  <Accordion title="App Block Display" icon="layout">
+    **Verify theme integration:**
+    
+    - ✅ **Order Status page**: Customer portal appears correctly
+    - ✅ **Thank You page**: Edit message displays properly
+    - ✅ **Mobile responsiveness**: Works on all device sizes
+    - ✅ **Theme compatibility**: Matches your store's design
+  </Accordion>
 </AccordionGroup>
 
-## Integration with Existing Tools
+## Testing Checklist
+
+<CardGroup cols={2}>
+  <Card title="Pre-Go-Live Tests" icon="clipboard-check">
+    **Complete before enabling for customers**
+    
+    - [ ] Draft order editing works end-to-end
+    - [ ] Time limits enforce correctly
+    - [ ] Refunds process as expected
+    - [ ] All enabled edit types function
+    - [ ] App blocks display properly
+    - [ ] Mobile experience is smooth
+  </Card>
+  
+  <Card title="Integration Tests" icon="plug">
+    **Verify third-party connections**
+    
+    - [ ] 3PL receives orders correctly
+    - [ ] Inventory updates in real-time
+    - [ ] Email marketing integrations work
+    - [ ] Analytics tracking continues
+    - [ ] Tax calculations remain accurate
+  </Card>
+</CardGroup>
+
+## Safe Testing Environment
 
 <Warning>
-If you use third-party fulfillment or inventory management tools, configure them after installing Revize.
+Use these methods to test safely without affecting real customers or inventory.
 </Warning>
 
-### Popular Integrations
-- **3PL Providers**: ShipBob, Fulfillment by Amazon, ShipStation
-- **ERP Systems**: NetSuite, SAP, Microsoft Dynamics
-- **Inventory Management**: Cin7, TradeGecko, Stitch Labs
-- **Email Marketing**: Klaviyo, Mailchimp, Omnisend
+### Test Customer Setup
+- **Use your own email** for test orders
+- **Create a test customer account** in Shopify admin
+- **Use Shopify's test payment methods** (no real charges)
+- **Test during off-peak hours** to avoid customer confusion
 
-## Troubleshooting Installation
+### Inventory Protection
+- **Use products with high inventory** for quantity testing
+- **Create test-only products** if needed
+- **Monitor inventory levels** during testing
+- **Restore inventory** after testing if needed
+
+## Common Testing Issues
 
 <AccordionGroup>
-<Accordion title="App Won't Install" icon="exclamation-triangle">
-**Common causes:**
-- Insufficient permissions (contact store owner)
-- Browser cache issues (clear cache and try again)
-- Shopify service outage (check Shopify status page)
-
-**Solution:** Try refreshing the page or contact support at [support@revize.app](mailto:support@revize.app)
-</Accordion>
-
-<Accordion title="Dashboard Not Loading" icon="refresh">
-**Common causes:**
-- Slow internet connection
-- Browser compatibility issues
-- Ad blockers interfering
-
-**Solution:** Try a different browser or disable ad blockers temporarily
-</Accordion>
-
-<Accordion title="Missing from Apps List" icon="search">
-**Common causes:**
-- Installation incomplete
-- App was uninstalled accidentally
-- Permissions issue
-
-**Solution:** Reinstall the app from the Shopify App Store
-</Accordion>
+  <Accordion title="Editing Options Not Appearing" icon="eye-slash">
+    **Possible causes:**
+    
+    - App not enabled in settings
+    - Time window already expired
+    - App blocks not properly configured
+    - Theme compatibility issues
+    
+    **Solution:** Check app status, time settings, and theme configuration
+  </Accordion>
+  
+  <Accordion title="Changes Not Saving" icon="exclamation-triangle">
+    **Possible causes:**
+    
+    - Internet connectivity issues
+    - Browser compatibility problems
+    - Insufficient product inventory
+    - Payment processing conflicts
+    
+    **Solution:** Test in different browsers, check inventory levels
+  </Accordion>
+  
+  <Accordion title="Orders Not Releasing" icon="pause">
+    **Possible causes:**
+    
+    - Order hold settings misconfigured
+    - Time window still active
+    - Manual release required
+    - 3PL integration issues
+    
+    **Solution:** Review hold settings and time configurations
+  </Accordion>
 </AccordionGroup>
 
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card
-    title="Quick Setup Guide"
-    icon="rocket"
-    href="/quickstart"
-  >
-    Complete your Revize configuration
+  <Card title="Go Live" icon="rocket" href="/quickstart">
+    **Enable for real customers**
+    
+    Ready to activate? Follow the final setup steps
   </Card>
-  <Card
-    title="Configure Time Limits"
-    icon="clock"
-    href="/setup/time-limits"
-  >
-    Set optimal editing windows
+  <Card title="Advanced Settings" icon="gear" href="/setup/order-edit-settings">
+    **Fine-tune your configuration**
+    
+    Explore all available customization options
   </Card>
-  <Card
-    title="Setup Integrations"
-    icon="plug"
-    href="/features/integrations"
-  >
-    Connect your existing tools
+  <Card title="Monitor Performance" icon="chart-line" href="/features/workflow">
+    **Track your results**
+    
+    See how order editing improves your metrics
   </Card>
-  <Card
-    title="Test Order Flow"
-    icon="flask"
-    href="/testing/draft-orders"
-  >
-    Verify everything works correctly
+  <Card title="Get Support" icon="headset" href="/support/faq">
+    **Need help?**
+    
+    Common questions and troubleshooting tips
   </Card>
 </CardGroup>
 
-<Note>
-Installation typically takes less than 5 minutes. If you encounter any issues, our support team is available at [support@revize.app](mailto:support@revize.app).
-</Note>
+<Check>
+**Ready to go live?** Once your tests pass, enable the app in your settings and start reducing support tickets while improving customer satisfaction!
+</Check>

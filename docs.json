@@ -24,6 +24,7 @@
           {
             "group": "Setup & Configuration",
             "pages": [
+              "setup/order-edit-settings",
               "setup/time-limits",
               "setup/refunds",
               "setup/edit-options",
