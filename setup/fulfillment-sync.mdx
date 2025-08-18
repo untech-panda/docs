@@ -1,0 +1,104 @@
+---
+title: "Fulfillment sync"
+description: "Control exactly when orders leave Revize and reach your 3PL or ERP. Align release timing with your edit window and fulfillment workflow."
+---
+
+<Note>
+  Fulfillment sync works with your [Edit window](/setup/edit-window) and [Order processing](/setup/order-processing) settings. First set your edit window and choose hold or skip hold, then decide when orders are released to fulfillment.
+</Note>
+
+## What this controls
+
+When Revize releases orders to your fulfillment system so your 3PL or ERP knows they're ready for picking and packing.
+
+## Set it in the app
+
+<Steps>
+  <Step title="Open Order Editing">
+    In the Revize app, click **Order Editing** in the sidebar.
+  </Step>
+  <Step title="Review your current settings">
+    Confirm your edit window and whether you hold orders or skip hold.
+  </Step>
+  <Step title="Choose release timing">
+    Select when orders should be released: when editing ends, at scheduled times, or using tags.
+  </Step>
+</Steps>
+
+## Release options
+
+<CardGroup cols={2}>
+  <Card title="Release when editing ends" icon="clock" color="#22c55e">
+    Orders are released immediately when the edit window closes. Simple and works with any 3PL.
+  </Card>
+  <Card title="Scheduled release times" icon="calendar-days" color="#f59e0b">
+    Release orders at specific daily or weekly times that match your pick schedule. Perfect for batch fulfillment.
+  </Card>
+  <Card title="Tag-based release" icon="tag" color="#0ea5e9">
+    Revize adds a tag when editing finishes. Configure your 3PL to only pick orders with this tag.
+  </Card>
+  <Card title="Early stop via tags" icon="truck" color="#8b5cf6">
+    Your WMS can add a tag when picking starts, and Revize will immediately close editing.
+  </Card>
+</CardGroup>
+
+## How it works with order processing
+
+<AccordionGroup>
+  <Accordion title="Hold orders + Release when editing ends" icon="pause">
+    **Most common setup**
+    
+    Orders stay on hold while customers edit. When the edit window closes, Revize lifts the hold and your 3PL can pick the order.
+    
+    **Good for:** Most stores, especially those with fast fulfillment
+  </Accordion>
+
+  <Accordion title="Hold orders + Scheduled release" icon="calendar">
+    Orders stay on hold until your next scheduled release time (e.g., daily at 2 PM). Even if editing ends early, orders wait for the scheduled release.
+    
+    **Good for:** Batch fulfillment, warehouses that pick at specific times
+  </Accordion>
+
+  <Accordion title="Skip hold + Tag-based release" icon="tag">
+    Orders are processed normally without any holds but Revize adds a release tag when editing ends. Configure your 3PL to only pick tagged orders.
+    
+    **Good for:** Advanced 3PLs that can filter by tags, fast-moving operations
+  </Accordion>
+</AccordionGroup>
+
+## Tag configuration
+
+<Note>
+  **Default tag:** Revize uses `revize:order_released` but we can customize this for your 3PL's requirements. [Contact support](mailto:hello@revize.app) to change it.
+</Note>
+
+**Tags Revize adds:**
+- `revize:order_released` - Added when editing window closes (if enabled)
+
+**Tags Revize watches for:**
+- Your stop tag (any tag you choose) — Have your WMS or Shopify Flow add a tag when picking starts (e.g., picked, wms:processing). Add the same tag under Order edit restrictions → Order tags in Revize, and the edit window will close immediately.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Orders not releasing to 3PL" icon="circle-exclamation">
+    **Check:** 
+    - Edit window has closed
+    - Scheduled time has passed (if using scheduled release)
+    - Release tag is being added (if using tag-based)
+    - Your 3PL integration is filtering correctly
+  </Accordion>
+  
+  <Accordion title="3PL picking orders too early" icon="triangle-exclamation">
+    **Solution:** Use "Hold orders" or configure your 3PL to only pick orders with the release tag.
+  </Accordion>
+  
+  <Accordion title="Want different tag names" icon="tag">
+    **Solution:** [Contact support](mailto:hello@revize.app) - we can customize tag names for your workflow.
+  </Accordion>
+</AccordionGroup>
+
+## Related setup
+
+- [Edit window](/setup/edit-window) — control how long customers can edit orders
+- [Order processing](/setup/order-processing) — choose whether to hold orders during editing

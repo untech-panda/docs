@@ -7,7 +7,7 @@
     "light": "#8B5CF6",
     "dark": "#4F46E5"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "navigation": {
     "tabs": [
       {
@@ -29,7 +29,7 @@
               "setup/edit-window",
               "setup/order-processing",
               "setup/payments-and-refunds",
-              "setup/edit-permissions",
+              "setup/order-edit-restrictions",
               "setup/fulfillment-sync"
             ]
           },

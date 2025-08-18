@@ -1,0 +1,115 @@
+---
+title: "Payments and refunds"
+description: "Choose how Revize handles price changes during order edits. Let customers pay the difference, issue refunds to the original payment method, or refund as store credit to boost loyalty."
+---
+
+## Set it in the app
+
+<Steps>
+  <Step title="Open Order Editing">
+    In the Revize app, click <strong>Order Editing</strong> in the sidebar.
+  </Step>
+  <Step title="Find Refund options">
+    Scroll to <strong>Refund options</strong>.
+  </Step>
+  <Step title="Choose your policy">
+    Select <strong>No refund</strong>, <strong>Refund to original payment</strong>, or <strong>Refund as store credit</strong>, then click <strong>Save</strong>.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    src="/images/quickstart/order-editing-2.png"
+    alt="Revize refund options and payment difference settings"
+    style={{ borderRadius: "12px", width: "100%", boxShadow: "0 4px 14px rgba(0,0,0,0.08)" }}
+  />
+</Frame>
+
+## How price changes work
+
+<Tip>
+  When customers edit orders, prices can go up or down. Revize handles both automatically based on your settings.
+</Tip>
+
+**Price increases:** Revize shows a Pay now button and securely collects the difference through Shopify.  
+**Price decreases:** Revize follows the refund option you choose below.
+
+## Your refund options
+
+<CardGroup cols={2}>
+  <Card title="No refund" icon="ban" color="#e11d48">
+    Customers can add items or swap to higher-value products. They cannot make changes that would reduce the total order value below the original amount.
+  </Card>
+  <Card title="Refund to original payment" icon="credit-card" color="#0ea5e9">
+    If an edit lowers the total, Revize issues a partial refund back to the original payment method.
+  </Card>
+  <Card title="Refund as store credit" icon="gift" color="#10b981">
+    If an edit lowers the total, Revize issues store credit for the difference so customers can use it on a future purchase.
+  </Card>
+</CardGroup>
+
+## When to choose each option
+
+<AccordionGroup>
+  <Accordion title="No refund" icon="ban">
+    <strong>How it works</strong>  
+    Keeps the final total at or above the original order amount. Even swaps are allowed; reducing value is blocked unless the shopper adds items or value to meet the original total.
+
+    <strong>Choose this when</strong>
+    - You want predictable revenue without partial refunds  
+    - You want to offer broad editing flexibility without lowering totals  
+    - You prefer fewer refund events in accounting
+
+    <strong>Customer experience</strong>  
+  If a change would lower the total, Revize blocks the edit and shows a message. The order total must stay at or above the original order amount.
+  </Accordion>
+
+  <Accordion title="Refund to original payment" icon="credit-card">
+    <strong>How it works</strong>  
+    When edits reduce the total, Revize automatically refunds the difference to the card or wallet used at checkout.
+
+    <strong>Choose this when</strong>
+    - You want a simple and familiar experience for shoppers  
+    - You follow strict refund policies
+
+    <strong>Customer experience</strong>  
+    The Refund button shows the amount. After they confirm, the order updates and a partial refund is issued via Shopify.
+  </Accordion>
+
+  <Accordion title="Refund as store credit" icon="gift">
+    <strong>How it works</strong>  
+    Converts the difference into store credit rather than cash.
+
+    <strong>Choose this when</strong>
+    - You want to retain revenue and encourage repeat purchases  
+    - You focus on lifetime value and loyalty
+
+    <strong>Customer experience</strong>  
+    The Refund button indicates credit will be issued. The order updates right away and the credit is available for next time.
+  </Accordion>
+</AccordionGroup>
+
+## Recommended settings
+
+<CardGroup cols={2}>
+  <Card title="New stores" icon="seedling" color="#22c55e">
+    <strong>Start with:</strong> Refund to original payment.  
+    It’s simple for customers and easy to support. You can switch to store credit later.
+  </Card>
+  <Card title="Established brands" icon="trophy" color="#f59e0b">
+    <strong>Consider:</strong> Refund as store credit.  
+    Keeps revenue in your ecosystem and often lifts future order value.
+  </Card>
+</CardGroup>
+
+<Note>
+  You can change your refund policy anytime. The new setting applies to future edits. Orders already in progress keep the method that was active when they started editing.
+</Note>
+
+## Related setup
+
+- [Edit window](/setup/edit-window), control how long customers can edit  
+- [Order processing](/setup/order-processing), hold during editing or flow with release tags  
+- [Customer edit options](/setup/edit-permissions), decide what shoppers can change
+
+<small>Want to see Pay now, Refund, and Confirm in action? Follow the steps in <a href="/how-to-test-revize">How to Test Revize</a>.</small>
