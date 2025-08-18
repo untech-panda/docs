@@ -18,30 +18,49 @@
             "pages": [
               "index",
               "quickstart",
-              "installation"
+              "how-to-test-revize"
             ]
           },
           {
-            "group": "Setup & Configuration",
+            "group": "Core Setup",
             "pages": [
-              "setup/order-edit-settings",
-              "setup/time-limits",
-              "setup/refunds",
-              "setup/edit-options",
-              "setup/store-integration"
+              "setup/hold-window",
+              "setup/edit-window",
+              "setup/edit-permissions",
+              "setup/payments-and-refunds",
+              "setup/fulfillment-sync"
             ]
           },
           {
             "group": "Features",
             "pages": [
-              "features/order-editing",
-              "features/workflow",
-              "features/integrations"
+              "features/customer-portal",
+              "features/address-edits",
+              "features/product-quantity-edits",
+              "features/add-products-upsell",
+              "features/shipping-upgrade",
+              "features/cancel-order",
+              "features/invoices-and-tax",
+              "features/delivery-date",
+              "features/support-tickets",
+              "features/analytics"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/shopify-customer-accounts",
+              "integrations/shipstation",
+              "integrations/shipbob",
+              "integrations/flexport",
+              "integrations/netsuite",
+              "integrations/klaviyo"
             ]
           },
           {
             "group": "Customization",
             "pages": [
+              "customization/branding",
               "customization/text-translations",
               "customization/notifications"
             ]
@@ -51,7 +70,24 @@
             "pages": [
               "testing/draft-orders",
               "testing/order-flow",
-              "troubleshooting/common-issues"
+              "testing/test-cases",
+              "troubleshooting/common-issues",
+              "troubleshooting/faq-technical"
+            ]
+          },
+          {
+            "group": "Security & Compliance",
+            "pages": [
+              "security/data-protection",
+              "security/gdpr",
+              "security/access-controls"
+            ]
+          },
+          {
+            "group": "Changelog",
+            "pages": [
+              "changelog/overview",
+              "changelog/roadmap"
             ]
           }
         ]
@@ -64,7 +100,8 @@
             "pages": [
               "support/faq",
               "support/billing",
-              "support/refund-policy"
+              "support/refund-policy",
+              "support/contact"
             ]
           }
         ]
@@ -85,7 +122,7 @@
         {
           "anchor": "Dashboard",
           "href": "https://app.revize.com",
-          "icon": "chart-line"
+          "icon": "layout-dashboard"
         }
       ]
     }
@@ -109,20 +146,23 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
       "x": "https://x.com/revizeapp",
       "linkedin": "https://linkedin.com/company/revize"
     }
+  },
+  "icons": {
+    "library": "fontawesome"
   }
 }

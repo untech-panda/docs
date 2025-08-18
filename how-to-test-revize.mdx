@@ -1,0 +1,91 @@
+---
+title: "How to Test Revize"
+description: "Create a draft order in Shopify, make edits from the order status page, and confirm the changes with Pay now, Refund, or Confirm."
+---
+
+<Note>
+  Quick test flow, no fluff. Create a draft order, open the order status page, try a few edits, and use Pay now, Refund, or Confirm to apply them.
+</Note>
+
+## 1. Create a draft order
+
+<Steps>
+  <Step title="Go to Orders → Drafts → Create draft order">
+    In Shopify admin, open <strong>Orders</strong>, click <strong>Drafts</strong>, then <strong>Create draft order</strong>.
+  </Step>
+
+  <Step title="Select or create a test customer">
+    In the <strong>Customer</strong> box, click <strong>Browse</strong>. If you already have a test customer, select it.  
+    If not, click <strong>Add customer</strong>, enter <em>your own email address</em>, and <strong>Save</strong>.  
+    Using your email is important, you will receive the order status link for testing.
+  </Step>
+
+  <Step title="Add items and a shipping rate">
+    Click <strong>Browse products</strong> to add at least one product and variant. Enter a shipping address, then choose a rate in <strong>Shipping</strong>.
+  </Step>
+
+  <Step title="Convert the draft to an order">
+    Click <strong>Collect payment</strong> → <strong>Mark as paid</strong>. This confirms the order.
+  </Step>
+
+  <Step title="Open the order status page">
+    In the order view, click <strong>More actions</strong> → <strong>View order status page</strong>. You should see the Revize Customer Portal on the page.
+  </Step>
+</Steps>
+
+<Frame>
+  <iframe
+    src="https://www.youtube.com/embed/qyCPbXqr_ow"
+    title="Shopify: create a draft order"
+    width="100%"
+    height="320"
+    style={{ border: 0, borderRadius: "12px", boxShadow: "0 4px 14px rgba(0,0,0,0.08)" }}
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
+  <small>Video guide, creating a draft order in Shopify.</small>
+</Frame>
+
+---
+
+## 2. Make edits on the order status page
+
+<Steps>
+  <Step title="Add a product">
+    Add an item from the Revize Customer Portal. You will see a <strong>Pay now</strong> card with the extra amount and an updated order summary. Click <strong>Pay now</strong> to charge and apply the change.
+  </Step>
+
+  <Step title="Remove value or downgrade">
+    Remove an item, lower quantity, or switch to a cheaper variant. Revize shows a <strong>Refund</strong> button with the amount and an updated summary. Click <strong>Refund</strong> to apply it.
+  </Step>
+
+  <Step title="Make a change with no price difference">
+    Swap a variant that costs the same, or edit details that do not change the total. Revize shows a <strong>Confirm</strong> button. Click <strong>Confirm</strong> to apply the edit.
+  </Step>
+
+  <Step title="Use Undo if needed">
+    Each proposed change includes an <strong>Undo</strong> option so you can return to the original state before applying it.
+  </Step>
+</Steps>
+
+<Note>
+  After you click <strong>Pay now</strong>, <strong>Refund</strong>, or <strong>Confirm</strong>, Revize updates the Shopify order immediately. The products, totals, and shipping method reflect the change right away.
+</Note>
+
+---
+
+## 3. Scenarios to try
+
+- **Update the shipping address.** Change the address and save. The order summary refreshes in the portal.  
+- **Swap a variant (same price).** Change size or color. You will see **Confirm** and **Undo**. Click **Confirm** to apply.  
+- **Add a product.** The portal shows a **Pay now** card with the additional amount and an updated summary. Click **Pay now** to charge and apply.  
+- **Upgrade the shipping method.** Pick a faster option. If it costs more, you will see **Pay now** with the difference.  
+- **Cancel the order.** Choose **Cancel order**. Revize follows your refund setting, either original payment or store credit, and shows the amount before you confirm.  
+- **Generate a tax invoice.** Open **Edit tax invoice**, add or update billing details or a tax ID, then download the updated invoice.  
+- **Contact support.** Use **Support** in the portal to send a request. This is useful when an edit needs human help.
+
+---
+
+<Note>
+  Done. If you do not see the Revize Customer Portal and Notifications on the order status page, add the Revize blocks in the Shopify checkout editor, then test again.
+</Note>

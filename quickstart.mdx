@@ -1,161 +1,209 @@
 ---
-title: 'Quick Setup Guide'
-description: 'Install Revize and configure order editing in 4 simple steps. Your customers will be editing orders in minutes.'
+title: "Launch Revize in Minutes"
+description: "Install Revize, set your edit window, choose what customers can change, add the app blocks, and go live with Shopify order editing in minutes."
 ---
 
-<Info>
-**Before you start**: Make sure you have admin access to your Shopify store and have installed Revize from the [Shopify App Store](https://apps.shopify.com/revize).
-</Info>
+<Note>
+  You do not need developers or custom code. Install the app, choose your settings, add the app blocks, and customers can start editing orders right away.
+</Note>
 
-# Quick Setup Guide
+---
 
-Get order editing live on your store in under 5 minutes with these 5 essential configurations.
+## 1. Install the app
 
 <Steps>
-  <Step title="Set Order Editing Deadline">
-    **Choose how long customers can edit their orders**
-    
-    - **30 minutes** (recommended for most stores)
-    - **Until fulfillment** (flexible but requires manual oversight)
-    - **Custom timeframe** (2 hours, 24 hours, etc.)
-    - **Scheduled cutoff** (daily cutoff times - e.g., all orders editable until 1:00 AM)
-    
-    <Tip>
-    Start with 30 minutes - it gives customers time to catch mistakes without delaying fulfillment.
-    </Tip>
+  <Step title="Open the Shopify App Store">
+    Go to the <a href="https://apps.shopify.com/revize" target="_blank">Revize listing</a> and click <strong>Add app</strong>.
   </Step>
-  
-  <Step title="Configure Order Hold Settings">
-    **Choose how orders are processed during editing**
-    
-    <Tabs>
-      <Tab title="Hold Orders (Recommended)" icon="pause">
-        Orders automatically pause for editing, then release to fulfillment. Works seamlessly with all 3PLs.
-      </Tab>
-      <Tab title="Skip Order Hold" icon="tag">
-        Orders process immediately. Revize adds tags when editing ends for 3PL pickup. *Requires deeper integration.*
-      </Tab>
-    </Tabs>
-    
-    <Warning>
-    Order hold is recommended - it prevents fulfillment conflicts and works with any system.
-    </Warning>
-  </Step>
-  
-  <Step title="Set Refund Methods">
-    **Control how refunds work when customers reduce order value**
-    
-    <CardGroup cols={3}>
-      <Card title="No Refunds" icon="x" color="#ef4444">
-        Customers can't reduce order value. No refunds processed.
-      </Card>
-      <Card title="Original Payment" icon="credit-card" color="#10b981">
-        Refunds go back to customer's payment method.
-      </Card>
-      <Card title="Store Credit" icon="gift" color="#8b5cf6">
-        Refunds become store credit to encourage return visits.
-      </Card>
-    </CardGroup>
-  </Step>
-  
-  <Step title="Choose What Customers Can Edit">
-    **Enable the editing options that make sense for your business**
-    
-    <AccordionGroup>
-      <Accordion title="Address & Contact" icon="truck">
-        - ✅ Edit shipping address
-        - ✅ Update contact info
-        - ✅ Add preferred delivery date
-      </Accordion>
-      
-      <Accordion title="Products & Quantities" icon="package">
-        - ✅ Change variant (size, color, style)
-        - ✅ Adjust quantities
-        - ✅ Add products (upsells)
-        - ✅ Replace products
-      </Accordion>
-      
-      <Accordion title="Orders & Support" icon="settings">
-        - ✅ Edit tax invoice
-        - ✅ Contact customer support
-        - ✅ Upgrade shipping methods
-        - ✅ Cancel order
-      </Accordion>
-    </AccordionGroup>
-    
-    <Note>
-    You can enable/disable any feature. Most stores start with address changes and product swaps.
-    </Note>
-  </Step>
-  
-  <Step title="Add App Blocks to Your Theme">
-    **Configure where customers access order editing**
-    
-    <CardGroup cols={3}>
-      <Card title="Customer Portal" icon="user-gear" color="#10b981">
-        **Order Status Page**
-        
-        Enable customers to make changes directly from the Order Status page. Reduces support tickets.
-      </Card>
-      
-      <Card title="Notification Block" icon="bell" color="#8b5cf6">
-        **Order Status Page**
-        
-        Notify customers about available editing options on their order status page.
-      </Card>
-      
-      <Card title="Edit Message Block" icon="message" color="#f59e0b">
-        **Thank You Page**
-        
-        Let customers know they can still make changes by adding this block to the Thank You page.
-      </Card>
-    </CardGroup>
-    
-    <Info>
-    These blocks are automatically added to your theme when you install Revize. You can customize their placement in your theme editor.
-    </Info>
-  </Step>
-  
-  <Step title="Enable the App">
-    **Activate Revize for your store**
-    
-    - Go to **App Settings** in your Revize dashboard
-    - Toggle **App Status** to **Active**
-    - Your customers can now edit orders according to your configuration!
-    
-    <Check>
-    🎉 **You're live!** New orders will automatically include editing capabilities based on your settings.
-    </Check>
+  <Step title="Approve permissions">
+    Shopify will ask for the access Revize needs to manage orders, payments, and fulfillment. Approve to continue.
   </Step>
 </Steps>
 
-## You're Done! 
-
-<CardGroup cols={2}>
-  <Card title="Test Your Setup" icon="flask" href="/testing/draft-orders">
-    Create a test order to see editing in action
-  </Card>
-  <Card title="View All Features" icon="list" href="/features/order-editing">
-    Explore advanced configuration options
-  </Card>
-</CardGroup>
-
-<Check>
-**What happens next?** New orders will automatically follow your configuration. Customers get edit links in confirmation emails and can access editing from their order status page.
-</Check>
+<Frame>
+  <img
+    src="/images/quickstart/home-1.png"
+    alt="Revize app home in Shopify"
+    style={{ borderRadius: "12px", width: "100%", boxShadow: "0 4px 14px rgba(0,0,0,0.08)" }}
+  />
+  <small>Revize home, with onboarding checklist.</small>
+</Frame>
 
 ---
 
-## Need Help?
+## 2. Set the edit deadline
 
-<CardGroup cols={3}>
-  <Card title="Test with Draft Orders" icon="test-tube" href="/testing/draft-orders">
-    Safe testing before going live
+<Info style={{ background: "#EEF2FF" }}>
+  By default, Revize places new orders on hold. This gives customers time to make edits before fulfillment starts. You can turn the hold off if your workflow needs immediate processing.
+</Info>
+
+<Steps>
+  <Step title="Open Order Editing">
+    In the Revize app, select <strong>Order Editing</strong> in the left sidebar.
+  </Step>
+  <Step title="Pick a duration or a scheduled cutoff">
+    Choose a preset like 15, 30, or 60 minutes, set a custom duration, or pick a scheduled cutoff time.
+  </Step>
+  <Step title="Choose processing">
+    Select <strong>Hold orders</strong> for the edit window, or <strong>Skip hold</strong> if your 3PL only pulls finalized orders. Optionally add a release tag for ready orders.
+  </Step>
+  <Step title="Save">
+    Click <strong>Save</strong>.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    src="/images/quickstart/order-editing-1.png"
+    alt="Order edit window and processing settings in Revize"
+    style={{ borderRadius: "12px", width: "100%", boxShadow: "0 4px 14px rgba(0,0,0,0.08)" }}
+  />
+  <small>Choose the edit window and processing behavior.</small>
+</Frame>
+
+---
+
+## 3. Choose payments and refunds
+
+<Tip style={{ background: "#EEF2FF" }}>
+  If an edit changes the order total, Revize handles the difference automatically. No spreadsheets. No manual work.
+</Tip>
+
+<Steps>
+  <Step title="Open Payments and refunds">
+    In <strong>Order Editing</strong>, scroll to <strong>Refund options</strong>.
+  </Step>
+  <Step title="Pick how differences are handled">
+    Choose one: <strong>No refund</strong>, <strong>Refund to original payment</strong>, or <strong>Refund as store credit</strong>.
+  </Step>
+  <Step title="Save">
+    Click <strong>Save</strong>.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    src="/images/quickstart/order-editing-2.png"
+    alt="Refund options in Revize"
+    style={{ borderRadius: "12px", width: "100%", boxShadow: "0 4px 14px rgba(0,0,0,0.08)" }}
+  />
+  <small>Pick how Revize collects or refunds differences.</small>
+</Frame>
+
+---
+
+## 4. Select what customers can edit
+
+<Steps>
+  <Step title="Open Customer edit options">
+    In <strong>Order Editing</strong>, scroll to <strong>Customer edit options</strong>.
+  </Step>
+  <Step title="Toggle the edits you allow">
+    Enable the options that fit your store. Shipping address, variant and quantity, add or replace products, upgrade shipping, cancel order, invoice and tax info, delivery date, and support ticket.
+  </Step>
+  <Step title="Save">
+    Click <strong>Save</strong>.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    src="/images/quickstart/edit-permissions.png"
+    alt="Customer edit options toggles in Revize"
+    style={{ borderRadius: "12px", width: "100%", boxShadow: "0 4px 14px rgba(0,0,0,0.08)" }}
+  />
+  <small>Turn on the edits you want to offer.</small>
+</Frame>
+
+---
+
+## 5. Add the app blocks
+
+<Note>
+  Add Revize to the Order Status page and the Thank You page in the Shopify checkout editor. This is where customers edit their orders.
+</Note>
+
+<Steps>
+  <Step title="Open the checkout editor">
+    In Shopify admin, go to <strong>Settings</strong>, then <strong>Checkout</strong>, then <strong>Customize</strong>.
+  </Step>
+  <Step title="Add blocks to the Order Status page">
+    In the page picker at the top, choose <strong>Order status page</strong>. Click <strong>Add block</strong>, then add <strong>Revize Customer Portal</strong> and <strong>Revize Notifications</strong>. Click <strong>Save</strong>.
+  </Step>
+  <Step title="Add the Thank You page message">
+    Switch the page picker to <strong>Thank you</strong>. Click <strong>Add block</strong>, add <strong>Revize Order Edit Message</strong>, then <strong>Save</strong>.
+  </Step>
+</Steps>
+
+
+<Frame>
+  <img
+    src="/images/quickstart/order-status-block.png"
+    alt="Adding Revize block to the Shopify Order Status page"
+    style={{ borderRadius: "12px", width: "100%", boxShadow: "0 4px 14px rgba(0,0,0,0.08)" }}
+  />
+  <small>Add the Revize block to both pages.</small>
+</Frame>
+
+---
+
+## 6. Enable the app
+
+<Steps>
+  <Step title="Enable Revize">
+    Go to <strong>Settings</strong> in the Revize sidebar. Turn on <strong>App status</strong>.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    src="/images/quickstart/settings.png"
+    alt="Revize settings, app status and branding"
+    style={{ borderRadius: "12px", width: "100%", boxShadow: "0 4px 14px rgba(0,0,0,0.08)" }}
+  />
+  <small>Enable the app and set your brand details.</small>
+</Frame>
+
+---
+
+## 7. Optional, customize text and languages
+
+<Steps>
+  <Step title="Open Translations">
+    In the Revize sidebar, select <strong>Translations</strong>.
+  </Step>
+  <Step title="Update copy">
+    Edit the customer portal text, message boxes, and notifications. Keep it on brand and clear.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    src="/images/quickstart/translations.png"
+    alt="Revize translations and text customization"
+    style={{ borderRadius: "12px", width: "100%", boxShadow: "0 4px 14px rgba(0,0,0,0.08)" }}
+  />
+</Frame>
+
+---
+
+## Next, place a test order
+
+<Note>
+  You are ready to test. Place a draft order or a real test order, then edit from the Order Status page to see the full flow.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Create a test order" icon="flask" href="/testing/order-flow">
+    Step by step, with a Shopify video on draft orders.
   </Card>
-  <Card title="Advanced Settings" icon="gear" href="/setup/time-limits">
-    Fine-tune your configuration
-  </Card>
-  <Card title="Get Support" icon="headset" href="/support/faq">
-    Questions? We're here to help
+  <Card title="Core Setup" icon="gear" href="/setup/hold-window">
+    Deep dive into the edit window, refunds, and permissions.
   </Card>
 </CardGroup>
+
+---
+
+<Note>
+  That is it. Revize is live. Customers can fix mistakes after checkout, your team saves time, and you capture more revenue.
+</Note>

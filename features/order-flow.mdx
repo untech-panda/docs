@@ -1,0 +1,110 @@
+---
+title: 'Understanding the Order Editing Flow'
+description: 'Learn how Revize works from order creation to fulfillment, and understand its core functionality and benefits.'
+---
+
+Revize allows your customers to make changes to their orders after checkout, providing a seamless and flexible post-purchase experience. This guide explains how the app works, from order creation to fulfillment, ensuring you understand its core functionality and benefits.
+
+# Order Editing Flow
+
+## Order is Created
+
+When a customer completes a purchase, the order is created by Shopify. If order editing is enabled, Revize places the order on hold for the duration of the editing window you've assigned, allowing the customer to make changes before fulfillment begins.
+
+## Customer Makes Edits
+
+During the editing window, customers can modify their order directly from the order status page. As a merchant, you control which edits are available, including:
+
+- Updating the shipping address and contact information
+- Changing product quantities or variants
+- Adding or replacing products
+- Upgrading the shipping method
+- Cancelling the order (if enabled)
+
+## Handling Additional Payments
+
+If an edit increases the order total, the customer must complete the additional payment before the order is released.
+
+<Steps>
+  <Step title="Payment Required">
+    If the payment is not completed, the order remains on hold. Shopify automatically sends an email prompting the customer to complete the pending payment.
+  </Step>
+  
+  <Step title="Payment Monitoring">
+    Revize checks the payment status every 24 hours, up to three times.
+  </Step>
+  
+  <Step title="Payment Completion">
+    If the payment is successfully completed, Revize removes the hold and releases the order for fulfillment.
+  </Step>
+  
+  <Step title="Merchant Notification">
+    As a merchant, you will receive a notification about the pending payment, allowing you to reach out to the customer and take necessary action.
+  </Step>
+</Steps>
+
+## Order is Released
+
+<CardGroup cols={2}>
+  <Card title="With Edits" icon="edit">
+    If a customer makes an edit and confirms their changes, Revize updates the order and removes the hold, allowing it to proceed to fulfillment.
+  </Card>
+  <Card title="Without Edits" icon="clock">
+    If no edits are made, Revize automatically releases the hold once the editing window closes, ensuring that the order moves forward for fulfillment without delay.
+  </Card>
+</CardGroup>
+
+<Info>
+In cases where additional payment is required, the order will remain on hold until the payment is completed. Revize will continue monitoring the payment status and notify the merchant accordingly.
+</Info>
+
+# How Revize Integrates with Your Store
+
+Revize seamlessly connects with your existing Shopify setup, ensuring smooth operations without disrupting your fulfillment process.
+
+## System Integration
+
+<CardGroup cols={2}>
+  <Card title="3PL & ERP Support" icon="truck">
+    **Major integrations supported**
+    
+    Revize integrates with major third-party logistics (3PL) providers and enterprise resource planning (ERP) systems, including DHL, FedEx, UPS, ShipStation, NetSuite, and more.
+  </Card>
+  <Card title="Shopify Native Compatibility" icon="store">
+    **Stays in ecosystem**
+    
+    Orders remain within Shopify's ecosystem, meaning inventory, payments, and fulfillment status stay synchronized.
+  </Card>
+</CardGroup>
+
+## Real-Time Updates
+
+- **Automatic Updates** – Any changes made by customers are reflected in real time, preventing order errors and reducing support requests.
+- **Order Status Page** – Customers access the editing options through their order confirmation email or the order status page after checkout.
+- **Email Notifications** – If configured, customers can be notified about available edits via order confirmation email, and a direct link is provided to modify their order.
+
+## Merchant Visibility
+
+**Viewing Edits** - Merchants can view order edits directly in the Shopify Admin under the Orders section, where Revize automatically adds relevant tags to indicate the changes made to each order.
+
+# Customizing Revize for Your Store
+
+Merchants have full control over how Revize functions:
+
+<CardGroup cols={3}>
+  <Card title="Edit Options" icon="settings">
+    Enable or disable specific editing options
+  </Card>
+  <Card title="Time Limits" icon="clock">
+    Set time limits for edits
+  </Card>
+  <Card title="Branding" icon="palette">
+    Customize text and translations to match your store's branding
+  </Card>
+</CardGroup>
+
+---
+
+<Info>
+Ready to configure your order editing settings? Check out our [configuration guide](/setup/order-edit-settings) for detailed setup options.
+</Info>
