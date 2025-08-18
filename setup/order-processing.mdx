@@ -1,0 +1,91 @@
+---
+title: "Order processing"
+description: "Control how orders flow to fulfillment while customers can edit their orders. Choose to hold orders during editing or let them flow normally with release tags."
+---
+
+## Set it in the app
+
+<Steps>
+  <Step title="Open Order Editing">
+    In the Revize app, click **Order Editing** in the sidebar.
+  </Step>
+  <Step title="Choose processing method">
+    In **Order processing**, select **Hold orders** or **Skip hold** and click **Save**.
+  </Step>
+</Steps>
+
+## Your options
+
+<CardGroup cols={2}>
+  <Card title="Hold orders" icon="pause" color="#f59e0b">
+    Orders are put on hold during the editing window, then released for fulfillment when editing closes.
+    <br /><br /><em>Prevents your 3PL from picking orders too early.</em>
+  </Card>
+
+  <Card title="Skip hold" icon="play" color="#10b981">
+    Orders flow normally through your systems. Use a release tag so your 3PL knows when editing is complete.
+    <br /><br /><em>Good for tag-based fulfillment workflows.</em>
+  </Card>
+</CardGroup>
+
+## How each option works
+
+<AccordionGroup>
+  <Accordion title="Hold orders (Recommended)" icon="pause">
+    **How it works**
+    
+    Orders are automatically put on hold in Shopify when they're created. When the editing window closes, the hold is lifted and the order flows seamlessly into your fulfillment system.
+
+    **Why it's recommended**
+    - Prevents your 3PL from picking orders immediately after checkout
+    - Ensures edited orders don't cause fulfillment conflicts
+    - Simple workflow that works with any 3PL or WMS
+    - No additional configuration needed
+  </Accordion>
+
+  <Accordion title="Skip hold" icon="play">
+    **How it works**
+    
+    Orders flow normally through your systems without being put on hold. Revize can add a release tag when the editing window closes to signal your 3PL that the order is ready for fulfillment.
+
+    **Pick this when**
+    - Your 3PL can wait for a release tag before picking orders
+    - You want to use tag-based workflows instead of hold/release
+
+    **Release tag setup**
+    
+    Enable the **Add release tag** option to tag orders with `revize:order_released` when editing closes. Configure your 3PL to only pick orders that have this tag.
+
+    <Note>
+      Without a release tag, your 3PL might pick orders before customers finish editing, which can cause fulfillment issues.
+    </Note>
+  </Accordion>
+</AccordionGroup>
+
+## Release tag configuration
+
+When you select **Skip hold**, enable the release tag feature:
+
+- **What it does**: Adds `revize:order_released` tag when editing window closes
+- **Purpose**: Signals to your 3PL that the order is ready for fulfillment  
+- **Benefit**: Prevents picking orders that are still being edited
+
+**Setup steps**
+
+<Steps>
+  <Step title="Enable release tag">
+    Turn on **Add release tag** in your Revize settings
+  </Step>
+  <Step title="Configure your 3PL">
+    Set your 3PL to only pick orders with the `revize:order_released` tag
+  </Step>
+  <Step title="Orders flow safely">
+    Orders flow normally but aren't picked until editing is complete
+  </Step>
+</Steps>
+
+## Related setup
+
+- [Edit window](/setup/edit-window) — set how long customers can edit orders
+- [Fulfillment sync](/setup/fulfillment-sync) — control when orders release to your 3PL/ERP
+- [Customer edit options](/setup/edit-permissions) — decide what shoppers can change

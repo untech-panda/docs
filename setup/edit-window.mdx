@@ -1,0 +1,134 @@
+---
+title: "Edit window"
+description: "Set how long customers can edit an order after checkout. Choose a fixed or custom duration, keep editing open until fulfillment, or schedule cutoffs that match your pick times."
+---
+
+## Set it in the app
+
+<Steps>
+  <Step title="Open Order Editing">
+    In the Revize app, click <strong>Order Editing</strong> in the sidebar.
+  </Step>
+  <Step title="Choose a window">
+    In <strong>Order edit window</strong>, pick an option and click <strong>Save</strong>.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    src="/images/quickstart/order-editing-1.png"
+    alt="Order edit window options in Revize"
+    style={{ borderRadius: "12px", width: "100%", boxShadow: "0 4px 14px rgba(0,0,0,0.08)" }}
+  />
+  <small>Configure how long customers can edit their order.</small>
+</Frame>
+
+## Options at a glance
+
+<CardGroup cols={2}>
+  <Card title="Fixed time windows" icon="hourglass-half" color="#8b5cf6">
+    A short grace period that starts at checkout. Common picks: 15, 30, or 60 minutes.
+    <br />
+    <em>Great for fast-moving teams that want quick corrections.</em>
+  </Card>
+
+  <Card title="Custom duration" icon="stopwatch" color="#10b981">
+    Set any length you want, such as 2 hours, 24 hours, or 48 hours.
+    <br />
+    <em>Ideal when packing starts later in the day.</em>
+  </Card>
+
+  <Card title="Until fulfillment" icon="truck" color="#0ea5e9">
+    Editing stays open until the order is marked <strong>Fulfilled</strong> in Shopify.
+    <br />
+    <em>Good if your WMS/ops controls when orders lock.</em>
+  </Card>
+
+  <Card title="Scheduled cutoff" icon="calendar-days" color="#f59e0b">
+    End editing at specific daily/weekly times that match your pick runs.
+    <br />
+    <em>Best for batch pick and stable pick lists.</em>
+  </Card>
+</CardGroup>
+
+## Details and examples
+
+<AccordionGroup>
+  <Accordion title="Fixed time windows" icon="hourglass-half">
+    **How it works**
+    
+    A countdown starts when the order is created. When it hits zero, editing closes automatically.
+
+    **Pick it when**
+    - You ship same-day or next-day
+    - You want a quick buffer to catch typos and size mistakes
+
+    **Common choices**
+    - 15–30 minutes for very fast operations
+    - 60–120 minutes for light batching
+  </Accordion>
+
+  <Accordion title="Custom duration" icon="stopwatch">
+    **How it works**
+    
+    You choose any window length (e.g., 2h, 24h, 48h). Editing closes once the timer ends.
+
+    **Pick it when**
+    - Your team starts pick/pack in defined waves later in the day
+    - You want extra time for customers on preorders or made-to-order items
+
+    **Tips**
+    - Start conservative (e.g., 2–4 hours) and extend if support volume stays low
+  </Accordion>
+
+  <Accordion title="Until fulfillment" icon="truck">
+    **How it works**
+    
+    Editing remains open until the order status is set to **Fulfilled** in Shopify. Revize does not place the order on hold with this option.
+
+    **Pick it when**
+    - You want orders to flow normally through your systems
+    - Your fulfillment process is fast and you can handle changes during picking
+    - You prefer not to hold orders in a queue
+
+    **Close editing when picking starts**
+    
+    Your WMS or Shopify Flow can add a tag (like `revize:stop-editing`) when an order is picked up for fulfillment. We'll configure Revize to watch for that tag and immediately close the editing window. [Contact Support](mailto:hello@revize.app) to set this up.
+  </Accordion>
+
+  <Accordion title="Scheduled cutoff (daily or weekly)" icon="calendar-days">
+    **How it works**
+    
+    You set specific cutoff times (one or more per day, or a few days a week). At checkout, each order looks ahead to the next cutoff and stays editable until that moment. Think of it like a bus timetable—every order boards the next bus. When the bus leaves, editing closes and orders move into fulfillment.
+
+    **Why teams love it**
+    - Customers can fix mistakes while you're not packing
+    - Pick lists are stable at the start of each run
+    - No last-minute changes during pick and pack
+
+    **Example schedule**
+    - Tuesday 11:00 AM and Tuesday 6:00 PM
+    - Thursday 11:00 AM and Thursday 6:00 PM
+
+    **What customers experience**
+    - Order placed *Thursday 6:15 PM* → editable until *Tuesday 11:00 AM*
+    - Order placed *Tuesday 11:10 AM* → editable until *Tuesday 6:00 PM*
+    - Order placed *Tuesday 6:05 PM* → editable until *Thursday 11:00 AM*
+
+    <Note>
+      Want a small **buffer** (e.g., lock 10–15 minutes before the cutoff so pick teams can stage carts)? [Contact Support](mailto:hello@revize.app) and we'll add it to your schedule.
+    </Note>
+  </Accordion>
+</AccordionGroup>
+
+## Which option should I choose?
+
+- **Ship quickly**: 15–60 minutes or a short custom window  
+- **Batch pick at set times**: scheduled cutoffs that mirror your pick runs  
+- **Let your WMS decide**: until fulfillment, with an optional early lock via tag (we can configure this for you)
+
+## Related setup
+
+- [Payments and refunds](/setup/payments-and-refunds) — choose how extra charges and partial refunds are handled  
+- [Fulfillment sync](/setup/fulfillment-sync) — control when orders release to your 3PL/ERP  
+- [Customer edit options](/setup/edit-permissions) — decide what shoppers can change

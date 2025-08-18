@@ -15,6 +15,7 @@
         "groups": [
           {
             "group": "Getting Started",
+            "icon": "rocket",
             "pages": [
               "index",
               "quickstart",
@@ -23,16 +24,18 @@
           },
           {
             "group": "Core Setup",
+            "icon": "sliders",
             "pages": [
-              "setup/hold-window",
               "setup/edit-window",
-              "setup/edit-permissions",
+              "setup/order-processing",
               "setup/payments-and-refunds",
+              "setup/edit-permissions",
               "setup/fulfillment-sync"
             ]
           },
           {
             "group": "Features",
+            "icon": "rectangle-list",
             "pages": [
               "features/customer-portal",
               "features/address-edits",
@@ -48,6 +51,7 @@
           },
           {
             "group": "Integrations",
+            "icon": "plug",
             "pages": [
               "integrations/shopify-customer-accounts",
               "integrations/shipstation",
@@ -59,6 +63,7 @@
           },
           {
             "group": "Customization",
+            "icon": "wand-magic-sparkles",
             "pages": [
               "customization/branding",
               "customization/text-translations",
@@ -67,6 +72,7 @@
           },
           {
             "group": "Testing & Troubleshooting",
+            "icon": "wrench",
             "pages": [
               "testing/draft-orders",
               "testing/order-flow",
@@ -77,6 +83,7 @@
           },
           {
             "group": "Security & Compliance",
+            "icon": "shield-check",
             "pages": [
               "security/data-protection",
               "security/gdpr",
@@ -85,6 +92,7 @@
           },
           {
             "group": "Changelog",
+            "icon": "newspaper",
             "pages": [
               "changelog/overview",
               "changelog/roadmap"
@@ -94,9 +102,11 @@
       },
       {
         "tab": "Support",
+        "icon": "life-ring",
         "groups": [
           {
             "group": "Help & FAQ",
+            "icon": "circle-question",
             "pages": [
               "support/faq",
               "support/billing",
@@ -110,19 +120,19 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Shopify App Store",
+          "anchor": "Install Revize",
           "href": "https://apps.shopify.com/revize",
-          "icon": "shopping-cart"
+          "icon": "cart-plus"
         },
         {
           "anchor": "Support",
           "href": "mailto:support@revize.app",
-          "icon": "envelope"
+          "icon": "life-ring"
         },
         {
-          "anchor": "Dashboard",
-          "href": "https://app.revize.com",
-          "icon": "layout-dashboard"
+          "anchor": "Book demo",
+          "href": "https://calendly.com/revize/onboarding",
+          "icon": "calendar-days"
         }
       ]
     }
@@ -133,28 +143,17 @@
   },
   "navbar": {
     "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@revize.app"
-      }
+      { "label": "Support", "href": "mailto:support@revize.app" },
+      { "label": "Book demo", "href": "https://calendly.com/revize/onboarding" }
     ],
     "primary": {
       "type": "button",
-      "label": "Get Started",
+      "label": "Install Revize",
       "href": "https://apps.shopify.com/revize"
     }
   },
   "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
-    ]
+    "options": ["copy", "view", "chatgpt", "claude", "perplexity", "mcp", "cursor", "vscode"]
   },
   "footer": {
     "socials": {
