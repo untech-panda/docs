@@ -126,12 +126,12 @@
         },
         {
           "anchor": "Support",
-          "href": "mailto:support@revize.app",
+          "href": "mailto:hello@revize.app",
           "icon": "life-ring"
         },
         {
           "anchor": "Book demo",
-          "href": "https://calendly.com/revize/onboarding",
+          "href": "https://cal.com/revize-team-xx92ri/30min?overlayCalendar=true",
           "icon": "calendar-days"
         }
       ]
@@ -143,8 +143,8 @@
   },
   "navbar": {
     "links": [
-      { "label": "Support", "href": "mailto:support@revize.app" },
-      { "label": "Book demo", "href": "https://calendly.com/revize/onboarding" }
+      { "label": "Support", "href": "mailto:hello@revize.app" },
+      { "label": "Book demo", "href": "https://cal.com/revize-team-xx92ri/30min?overlayCalendar=true" }
     ],
     "primary": {
       "type": "button",
