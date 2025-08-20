@@ -1,10 +1,10 @@
 ---
 title: "Order edit restrictions"
-description: "Block editing for specific orders or products using Shopify tags. Control what customers can edit with simple tag-based rules."
+description: "Block editing for specific orders or products using order tags and product tags. Control what customers can edit with simple tag-based rules."
 ---
 
 <Note>
-  Use Shopify tags to block edits on specific orders or products. Leave fields blank to allow edits on everything. Need advanced controls? Email [hello@revize.app](mailto:hello@revize.app) and we'll configure them for you.
+  Use order tags and product tags to block edits. Leave fields blank to allow edits on everything. Need advanced controls? Email [hello@revize.app](mailto:hello@revize.app) and we'll configure them for you.
 </Note>
 
 ## Set it in the app
@@ -17,7 +17,7 @@ description: "Block editing for specific orders or products using Shopify tags. 
     Enter tags you want to block under **Order tags** and **Product tags**, then click **Save**.
   </Step>
   <Step title="Tag in Shopify">
-    Add these tags to orders or products in Shopify, either manually or with Shopify Flow. Revize reads them automatically.
+    Add these same tags to your orders or products in Shopify. Revize reads them automatically and blocks edits.
   </Step>
 </Steps>
 
@@ -30,44 +30,61 @@ description: "Block editing for specific orders or products using Shopify tags. 
   <small>Block edits for orders or products that have these tags.</small>
 </Frame>
 
-## How blocking works
+## How it works
 
 <AccordionGroup>
-  <Accordion title="Order tag blocking" icon="tag">
+  <Accordion title="Block entire orders with order tags" icon="tag">
     **What it does**
     
-    If an order has any tag from your block list, customers cannot edit that entire order.
+    Add a tag to an order in Shopify. If that tag is in your block list, customers cannot edit anything on that order.
 
-    **Common uses**
-    - Block `high-risk` or `priority` orders from being edited
-    - Keep `b2b` and `wholesale` orders locked
-    - Prevent edits on `final-sale` or `clearance` orders
+    **How to set it up**
+    1. Add `no-edit` to your order tag block list in Revize
+    2. Tag an order with `no-edit` in Shopify
+    3. That entire order becomes uneditable
 
-    **Example**
-    
-    You add `no-edit` to your order tag block list. Any order tagged with `no-edit` in Shopify becomes completely uneditable.
+    **Common examples**
+    - Block `high-risk` orders from being edited
+    - Keep `wholesale` orders locked
+    - Prevent edits on `final-sale` orders
+    - Block `rush` orders that are already being packed
   </Accordion>
 
-  <Accordion title="Product tag blocking" icon="box">
+  <Accordion title="Block specific products with product tags" icon="box">
     **What it does**
     
-    If a product in the order has any tag from your block list, customers cannot edit that specific line item. Other products in the order remain editable.
+    Add a tag to a product in Shopify. If that tag is in your block list, customers cannot edit that specific item in their order. Other items remain editable.
 
-    **What gets blocked**
-    - Changing quantity of that item
-    - Swapping variants (size, color, etc.)
-    - Removing that item from the order
+    **What gets blocked for that product**
+    - Changing quantity
+    - Switching size, color, or variant
+    - Removing it from the order
 
-    **Common uses**
-    - Block edits on `final-sale` or `non-returnable` products
-    - Protect `custom` or `personalized` items from changes
-    - Lock `bundle` or `kit` components
+    **How to set it up**
+    1. Add `final-sale` to your product tag block list in Revize
+    2. Tag a product with `final-sale` in Shopify
+    3. That product becomes uneditable in all orders
 
-    **Example**
-    
-    You add `final-sale` to your product tag block list. If an order contains a final-sale item, customers can edit other items but cannot change anything about the final-sale product.
+    **Common examples**
+    - Block `final-sale` items from being changed
+    - Protect `custom` or `personalized` products
+    - Lock `bundle` components from being modified
   </Accordion>
 </AccordionGroup>
+
+## Where to find tags in Shopify
+
+**For orders:**
+1. Go to Orders in your Shopify admin
+2. Click on any order
+3. Scroll down to see the Tags field
+4. Add tags like `no-edit` or `high-risk`
+
+**For products:**
+1. Go to Products in your Shopify admin
+2. Click on any product
+3. In the Search engine listing section, find Tags
+4. Add tags like `final-sale` or `custom`
 
 ## Advanced restrictions
 
@@ -78,50 +95,78 @@ For more complex rules, we can configure these for you:
     Allow edits but prevent order cancellations using specific order tags.
   </Card>
   <Card title="Hide address changes" icon="shield" color="#0ea5e9">
-    Block address edits for specific customer segments using customer tags.
+    Block address edits for specific customer types using customer tags.
   </Card>
   <Card title="Curated add-products" icon="list" color="#22c55e">
     Show only specific products when customers try to add items to their order.
   </Card>
-  <Card title="Line-item property blocks" icon="code" color="#8b5cf6">
-    Block product edits based on custom line-item properties like bundle IDs or custom flags.
+  <Card title="Custom property blocks" icon="code" color="#8b5cf6">
+    Block edits based on custom line item properties like bundle IDs or special flags.
   </Card>
 </CardGroup>
 
-<Tip>
-  **Automate with Shopify Flow:** Tag orders automatically based on your rules. For example, if your warehouse picks orders 60 minutes after creation, use Flow to add a blocking tag at the 58-minute mark.
-</Tip>
-
 ## Best practices
 
-**Keep tags simple and consistent:**
-- Use clear names: `no-edit`, `final-sale`, `high-risk`
-- Document your tagging strategy for your team
-- Test with a sample order before going live
+**Use clear tag names:**
+- `no-edit` instead of `ne` or `block`
+- `final-sale` instead of `fs` or `clearance`
+- `high-risk` instead of `hr` or `risky`
 
-**Strategic tagging:**
-- Tag products during product creation if they should never be editable
-- Use Shopify Flow to tag orders based on conditions (value, location, customer type)
-- Consider customer segments that might need restrictions
+**Plan your strategy:**
+- Decide which products should never be editable and tag them when you create them
+- Use Shopify Flow to automatically tag orders based on value, location, or customer type
+- Document your tags so your team knows what each one does
 
-## Troubleshooting
+## Common questions
 
 <AccordionGroup>
-  <Accordion title="Added a tag but order is still editable" icon="circle-question">
-    **Check these steps:**
-    - Verify the tag spelling matches exactly in both Revize and Shopify
-    - Confirm you clicked **Save** in Revize after adding the tag
-    - Refresh the order page and try again
-    - Check if you added the tag to the right place (order vs product)
+  <Accordion title="I added a tag but the order is still editable" icon="circle-question">
+    **Check these things:**
+    - Make sure the tag name in Revize matches exactly what you typed in Shopify
+    - Click **Save** in Revize after adding the tag
+    - Check if you added the tag to the right place (order page vs product page)
+    - Refresh the customer's order page and try again
   </Accordion>
 
-  <Accordion title="Product block working but other items still editable" icon="circle-check">
-    **This is expected behavior.** Product blocks only affect specific line items. If an order has both blocked and unblocked products, customers can still edit the unblocked items.
+  <Accordion title="Only one product is blocked but customers can still edit the order" icon="circle-check">
+    **This is normal.** Product tags only block that specific product. Customers can still edit other items in the same order.
+    
+    If you want to block the entire order, use an order tag instead.
   </Accordion>
 
-  <Accordion title="Need a restriction that's not available" icon="wand-magic-sparkles">
-    **We can help!** Email [hello@revize.app](mailto:hello@revize.app) with your specific requirements. We can set up custom rules using tags, line-item properties, customer segments, or other conditions.
+  <Accordion title="Can I block editing after a certain time?" icon="clock">
+    **Yes, with Shopify Flow.** Set up a Flow that adds a `no-edit` tag to orders 2 hours after they're created. Then add `no-edit` to your order tag block list in Revize.
   </Accordion>
+
+  <Accordion title="I need a restriction that's not available" icon="wand-magic-sparkles">
+    **Email us!** Send your requirements to [hello@revize.app](mailto:hello@revize.app). We can set up custom rules for almost any scenario.
+  </Accordion>
+
+  <Accordion title="How do I automate tag blocking with Shopify Flow?" icon="robot">
+ **Set up automatic tagging to block edits based on your business rules:**
+
+ <Steps>
+   <Step title="Add blocking tags to Revize">
+     First, add your blocking tags in Revize under order tags or product tags (like `no-edit` or `high-risk`).
+   </Step>
+   <Step title="Create a Shopify Flow">
+     In Shopify, create a Flow that adds these same tags to orders or products based on your conditions.
+   </Step>
+   <Step title="Edits get blocked automatically">
+     When Flow adds the tag to an order or product, Revize automatically blocks editing.
+   </Step>
+ </Steps>
+
+ **Example workflows:**
+ - Add `no-edit` to your order tag block list → Create a Flow that tags orders with `no-edit` 2 hours after they're placed
+ - Add `high-risk` to your order tag block list → Create a Flow that tags orders over $500 with `high-risk`
+ - Add `final-sale` to your product tag block list → Create a Flow that tags clearance products with `final-sale`
+
+ <Note>
+   The tags you set up in Revize and the tags Flow adds to orders or products must match exactly for blocking to work.
+ </Note>
+</Accordion>
+
 </AccordionGroup>
 
 ## Related setup
