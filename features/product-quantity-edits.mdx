@@ -1,16 +1,16 @@
 ---
-title: "Product & Quantity Edits"
-description: "Let customers fix product mistakes after checkout. Change sizes, colors, quantities, or swap items entirely. Handle payments automatically when totals change."
+title: "Product Variant & Quantity Edits"
+description: "Shopify customers can fix product mistakes after checkout. Change sizes, colors, quantities, or swap items entirely. Automatic payment handling when order totals change."
 ---
 
-<Info>
-  Size and color mistakes are the top reasons customers want to edit orders. Let them fix these instantly instead of canceling and reordering.
-</Info>
+<Note>
+  Size and color mistakes are the top reasons Shopify customers want to edit orders. Let them fix these instantly instead of canceling and reordering.
+</Note>
 
-## Why product editing matters
+## Why Shopify product editing matters
 
 <CardGroup cols={2}>
-  <Card title="Reduce Returns" icon="undo" color="#ef4444">
+  <Card title="Reduce Returns" icon="arrow-down" color="#ef4444">
     Customers fix size and color mistakes before items ship, preventing costly returns and exchanges.
   </Card>
   <Card title="Save Orders from Cancellation" icon="shield-check" color="#10b981">
@@ -26,57 +26,21 @@ description: "Let customers fix product mistakes after checkout. Change sizes, c
 
 ## What customers can change
 
-<Tabs>
-  <Tab title="Variants">
-    **Size, color, style changes**
-    
-    - Switch from Medium to Large  
-    - Change from Blue to Red
-    - Swap Regular to Premium version
-    - Update from 32GB to 64GB
-    
-    *Revize handles price differences automatically*
-  </Tab>
-  
-  <Tab title="Quantities">
-    **Increase or decrease amounts**
-    
-    - Change from 2 items to 3 items
-    - Reduce quantity from 5 to 1
-    - Add extra units for bulk discounts
-    
-    *Perfect for bulk orders or gift sets*
-  </Tab>
-  
-  <Tab title="Product Swaps">
-    **Replace with different products**
-    
-    - Swap iPhone case for Samsung case
-    - Change from t-shirt to hoodie
-    - Replace sold-out item with alternative
-    
-    *Great for seasonal or trend changes*
-  </Tab>
-  
-  <Tab title="Remove Items">
-    **Delete products from order**
-    
-    - Remove duplicate items
-    - Delete unwanted add-ons
-    - Clear accidental clicks
-    
-    *Automatic refunds for removed items*
-  </Tab>
-</Tabs>
+Shopify customers can edit their orders in multiple ways:
 
-## How customers make changes
+- **Product variants:** Switch sizes, colors, styles, or capacity (Medium to Large, Blue to Red, 32GB to 64GB)
+- **Quantities:** Increase or decrease item amounts for bulk orders or corrections
+- **Product replacements:** Swap completely different products (iPhone case to Samsung case, t-shirt to hoodie)  
+- **Item removal:** Delete unwanted products with automatic refunds
+
+## How customers edit product variants and quantities
 
 <Steps>
   <Step title="Select item to change">
-    From the Customer Portal, customer clicks **Edit** next to any product in their order.
+    From the Customer Portal, under "Change variant or quantity," the customer clicks **Edit** next to any product in their Shopify order.
   </Step>
-  <Step title="Choose new variant or quantity">
-    Pick different size, color, quantity, or browse alternative products in a clean selection interface.
+  <Step title="Choose new variant in modal">
+    A modal popup opens where they can select different size, color, or variant options for that specific product.
   </Step>
   <Step title="Review price difference">
     See exactly how the change affects the order total with clear before/after pricing.
@@ -86,24 +50,24 @@ description: "Let customers fix product mistakes after checkout. Change sizes, c
   </Step>
 </Steps>
 
-## Payment handling
+## Automatic payment handling
 
 <AccordionGroup>
   <Accordion title="Price increases" icon="credit-card">
     **When new items cost more**
     
-    Customer sees a **Pay now** card with:
+    Customer sees a **Pay now** option with:
     - Exact additional amount to charge
     - Updated order total
-    - Payment method (saved card or new payment)
+    - Payment through Shopify's secure checkout
     
-    Payment processes automatically through Shopify's secure checkout.
+    Payment processes automatically when confirmed.
   </Accordion>
   
   <Accordion title="Price decreases" icon="money-bill">
     **When new items cost less**
     
-    Customer sees a **Refund** card with:
+    Customer sees a **Refund** option with:
     - Amount being refunded
     - Refund destination (original payment or store credit)
     - Updated order total
@@ -123,17 +87,17 @@ description: "Let customers fix product mistakes after checkout. Change sizes, c
   </Accordion>
 </AccordionGroup>
 
-## Customer experience
+## Enhanced customer experience
 
 <CardGroup cols={2}>
   <Card title="Visual Product Browser" icon="images" color="#6366f1">
-    Customers see product photos, descriptions, and variant options just like during initial shopping.
+    Customers see product photos, descriptions, and variant options just like during initial shopping. Image swatches coming soon.
   </Card>
   <Card title="Real-time Pricing" icon="calculator" color="#0ea5e9">
-    Price changes appear instantly as customers select different options.
+    Price changes appear instantly as customers select different options in the edit modal.
   </Card>
-  <Card title="Inventory Checking" icon="boxes" color="#10b981">
-    Out-of-stock variants are clearly marked, with suggested alternatives shown.
+  <Card title="Real-time Inventory" icon="warehouse" color="#10b981">
+    Live inventory checking based on shipping zones and warehouses. Products will be marked out of stock if inventory runs out and won't be able to be added to the order.
   </Card>
   <Card title="Undo Option" icon="rotate-left" color="#ec4899">
     Every change includes an **Undo** button to revert back to the original choice.
@@ -142,121 +106,57 @@ description: "Let customers fix product mistakes after checkout. Change sizes, c
 
 ## Smart product suggestions
 
-<Tabs>
-  <Tab title="Size Alternatives">
-    **When requested size is unavailable:**
-    
-    - Show similar sizes with fit guidance
-    - Suggest size up/down with notes  
-    - Recommend alternative styles in correct size
-  </Tab>
-  
-  <Tab title="Color Options">
-    **For color changes:**
-    
-    - Display all available colors for the same product
-    - Show color swatches or product photos
-    - Highlight popular color choices
-  </Tab>
-  
-  <Tab title="Related Products">
-    **For product swaps:**
-    
-    - Suggest similar items in the same category
-    - Show complementary products
-    - Recommend bestsellers or new arrivals
-  </Tab>
-  
-  <Tab title="Upgrade Options">
-    **For upsell opportunities:**
-    
-    - Premium versions of selected products
-    - Bundle deals including the current item
-    - Limited-time upgrade offers
-  </Tab>
-</Tabs>
+Advanced product recommendations and alternatives are coming soon to help customers find the perfect replacement items.
 
-## Inventory and availability
+## Real-time inventory management
 
-<Steps>
-  <Step title="Real-time stock checking">
-    Revize checks current inventory levels when customers browse alternatives.
-  </Step>
-  <Step title="Clear availability status">
-    Products show as **In Stock**, **Low Stock**, or **Out of Stock** with exact quantities when helpful.
-  </Step>
-  <Step title="Alternative suggestions">
-    When items are unavailable, customers see similar products that are in stock.
-  </Step>
-  <Step title="Backorder handling">
-    For backorderable items, customers see expected availability dates and can choose to wait or swap.
-  </Step>
-</Steps>
+Revize automatically checks inventory levels based on the customer's shipping location and delivery zone. When customers edit products, inventory is verified against the specific warehouse or fulfillment location that would ship to their address. This zone-based inventory checking ensures customers can only select variants that are actually available for delivery to their location. If a product runs out of stock at the relevant warehouse, it's immediately marked as unavailable and cannot be added to the edited order.
 
-## Enable product editing
+<Note>
+  Inventory availability is determined by shipping zones - customers only see stock from warehouses that can fulfill orders to their delivery address.
+</Note>
+
+## Enable product variant and quantity editing
 
 <Steps>
   <Step title="Open Order Editing settings">
     In the Revize app, click **Order Editing** in the sidebar.
   </Step>
-  <Step title="Enable product and quantity changes">
-    In **Customer edit options**, turn on **Product variants and quantity** and click **Save**.
+  <Step title="Enable product editing">
+    In **Customer edit options**, turn on **Edit product details** and check both **Allow customers to change product quantity** and **Allow customers to change product variants**. Click **Save**.
   </Step>
   <Step title="Configure restrictions (optional)">
-    Set limits on quantity increases, variant swaps, or specific product categories if needed.
+    Restrict editing for specific products using [product tags or line item properties](/setup/order-edit-restrictions) if needed.
   </Step>
 </Steps>
 
-## Common scenarios
+## Frequently asked questions
 
 <AccordionGroup>
-  <Accordion title="Size mistakes" icon="ruler">
-    **Most common edit type**
-    
-    - Customer ordered Medium, needs Large
-    - Wrong shoe size selected during quick checkout  
-    - Clothing gift that needs different sizing
-    
-    **Revize handles:** Price adjustments, inventory verification, size chart references
+  <Accordion title="How do customers change product variants in Revize?" icon="swap">
+    Customers click **Edit** next to any product in Customer Portal, which opens a modal where they can select different sizes, colors, or variants. Changes are confirmed with automatic payment processing if needed.
   </Accordion>
-  
-  <Accordion title="Color preferences" icon="palette">
-    **Style changes after order**
-    
-    - Changed mind about color choice
-    - Matching existing items in wardrobe
-    - Gift recipient color preferences
-    
-    **Revize handles:** Photo comparisons, availability checking, same-price swaps
+
+  <Accordion title="Can customers see real-time inventory when editing?" icon="warehouse">
+    Yes, Revize shows live inventory status based on shipping zones and warehouses. Out-of-stock items are clearly marked and cannot be selected for the edited order.
   </Accordion>
-  
-  <Accordion title="Quantity adjustments" icon="plus-minus">
-    **Order amount changes**
-    
-    - Need more items for team or family
-    - Accidentally ordered too many
-    - Bulk discount opportunities
-    
-    **Revize handles:** Volume pricing updates, payment processing, inventory allocation
+
+  <Accordion title="What happens when variant changes affect order pricing?" icon="dollar-sign">
+    Customers see the exact price difference immediately. They can pay for increases through Shopify's checkout, receive refunds for decreases, or simply confirm same-price changes.
   </Accordion>
-  
-  <Accordion title="Product upgrades" icon="arrow-up">
-    **Premium alternatives**
-    
-    - Upgrade from Basic to Pro version
-    - Switch to higher-capacity model
-    - Add premium features or materials
-    
-    **Revize handles:** Upsell pricing, feature comparisons, payment collection
+
+  <Accordion title="Can I restrict which products customers can edit?" icon="shield">
+    Yes, you can use product tags or line item properties to restrict editing for specific products, categories, or order types. This is configured in your order edit restrictions.
   </Accordion>
 </AccordionGroup>
 
 <Note>
-  Product and quantity editing is the core of order flexibility. Enable these features to reduce returns, eliminate support tickets, and turn ordering mistakes into revenue opportunities.
+  Product variant and quantity editing is essential for Shopify order flexibility. Enable these features to reduce returns, eliminate support tickets, and turn ordering mistakes into revenue opportunities.
 </Note>
 
-## Related features
+## Related Shopify order editing features
 
 - [Add Products & Upsell](/features/add-products-upsell) — let customers add new items to existing orders
-- [Customer Portal](/features/customer-portal) — where customers access product editing
-- [Payments & Refunds](/setup/payments-and-refunds) — configure how price differences are handled
+- [Customer Portal](/features/customer-portal) — where customers access product editing tools
+- [Order Edit Restrictions](/setup/order-edit-restrictions) — configure product editing limitations
+- [Payments & Refunds](/setup/payments-and-refunds) — setup how price differences are handled
