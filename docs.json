@@ -80,7 +80,7 @@
       "anchors": [
         {
           "anchor": "Install Revize",
-          "href": "https://apps.shopify.com/revize",
+          "href": "https://apps.shopify.com/revize?utm_source=documentation&utm_medium=docs&utm_campaign=install_button",
           "icon": "cart-plus"
         },
         {
@@ -108,7 +108,7 @@
     "primary": {
       "type": "button",
       "label": "Install Revize",
-      "href": "https://apps.shopify.com/revize"
+      "href": "https://apps.shopify.com/revize?utm_source=documentation&utm_medium=docs&utm_campaign=install_button"
     }
   },
   "contextual": {
