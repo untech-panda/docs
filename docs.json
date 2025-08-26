@@ -30,7 +30,8 @@
               "setup/order-processing",
               "setup/payments-and-refunds",
               "setup/order-edit-restrictions",
-              "setup/fulfillment-sync"
+              "setup/fulfillment-sync",
+              "setup/translations"
             ]
           },
           {
@@ -50,52 +51,10 @@
             ]
           },
           {
-            "group": "Integrations",
-            "icon": "plug",
-            "pages": [
-              "integrations/shopify-customer-accounts",
-              "integrations/shipstation",
-              "integrations/shipbob",
-              "integrations/flexport",
-              "integrations/netsuite",
-              "integrations/klaviyo"
-            ]
-          },
-          {
-            "group": "Customization",
-            "icon": "wand-magic-sparkles",
-            "pages": [
-              "customization/branding",
-              "customization/text-translations",
-              "customization/notifications"
-            ]
-          },
-          {
-            "group": "Testing & Troubleshooting",
-            "icon": "wrench",
-            "pages": [
-              "testing/draft-orders",
-              "testing/order-flow",
-              "testing/test-cases",
-              "troubleshooting/common-issues",
-              "troubleshooting/faq-technical"
-            ]
-          },
-          {
-            "group": "Security & Compliance",
-            "icon": "shield-check",
-            "pages": [
-              "security/data-protection",
-              "security/gdpr",
-              "security/access-controls"
-            ]
-          },
-          {
             "group": "Changelog",
             "icon": "newspaper",
             "pages": [
-              "changelog/overview",
-              "changelog/roadmap"
+              "changelog/overview"
             ]
           }
         ]

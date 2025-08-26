@@ -1,328 +1,180 @@
 ---
 title: "Support Tickets"
-description: "Let customers open support requests directly from the order portal when self-service edits aren't enough. Streamline support with order context and smart routing."
+description: "Let Shopify customers create support tickets directly from their order page when self-service editing isn't enough. Simple contact form with automatic email notifications to merchants and customers."
 ---
 
-<Info>
-  Sometimes customers need help beyond self-service edits. Give them a direct path to support while keeping all order context intact.
-</Info>
+<Note>
+  When customers can't solve their order issues through self-service editing, let them contact support directly from their order page with full context included.
+</Note>
 
-## When customers need support
+## Why Shopify support tickets reduce workload
 
 <CardGroup cols={2}>
-  <Card title="Complex Changes" icon="puzzle-piece" color="#8b5cf6">
-    Order modifications that require human judgment or aren't possible through self-service.
+  <Card title="Direct Order Context" icon="link" color="#8b5cf6">
+    Support requests include order details automatically - no need for customers to explain their situation from scratch.
   </Card>
-  <Card title="Special Circumstances" icon="exclamation-triangle" color="#f59e0b">
-    Unique situations like medical needs, emergencies, or custom product requirements.
+  <Card title="Organized Help Topics" icon="list" color="#10b981">
+    Customers choose from predefined topics, helping you categorize and prioritize support requests efficiently.
   </Card>
-  <Card title="Technical Issues" icon="bug" color="#ef4444">
-    Problems with the editing interface, payment processing, or order status display.
+  <Card title="Instant Notifications" icon="envelope" color="#f59e0b">
+    Both you and the customer receive immediate email confirmation when tickets are created.
   </Card>
-  <Card title="Policy Questions" icon="question-circle" color="#6366f1">
-    Clarification needed about return policies, warranty terms, or shipping restrictions.
+  <Card title="Seamless Experience" icon="heart" color="#ef4444">
+    Support requests happen directly from the order page - no separate systems or logins required.
   </Card>
 </CardGroup>
 
-## How customers request support
+## How customers create support tickets
 
 <Steps>
   <Step title="Access support option">
-    From the Customer Portal, customer clicks **Contact Support** to open a support request.
+    From the Revize Customer Portal, customers click **Contact customer support** to open the support request form.
   </Step>
-  <Step title="Describe their issue">
-    Fill out a simple form explaining what they need help with, with order context pre-filled.
+  <Step title="Select help topic">
+    Choose from predefined topics like "I want to change the shipping address," "I want to add more products," or "Other."
   </Step>
-  <Step title="Choose contact preference">
-    Select preferred communication method: email, phone callback, or live chat.
+  <Step title="Fill contact details">
+    Enter or confirm email address, add optional phone number, and describe their specific issue or request.
   </Step>
-  <Step title="Submit request">
-    Click **Send Request** to create a support ticket with full order history attached.
+  <Step title="Send support request">
+    Click **Send** to submit the ticket with order context automatically included.
+  </Step>
+  <Step title="Email confirmations sent">
+    Both customer and merchant receive immediate email notifications about the new support request.
   </Step>
 </Steps>
 
-## Smart ticket creation
+<Frame>
+  <img
+    src="/images/features/support-tickets.png"
+    alt="Revize create support tickets on order status page"
+    style={{ borderRadius: "12px", width: "100%", boxShadow: "0 4px 14px rgba(0,0,0,0.08)" }}
+  />
+</Frame>
 
-<Tabs>
-  <Tab title="Pre-filled Context">
-    **Order details included automatically**
-    
-    - Order number and status
-    - Items purchased and quantities
-    - Shipping and billing addresses
-    - Payment method and history
-    - Previous edit attempts
-    
-    *Saves time explaining the situation*
-  </Tab>
-  
-  <Tab title="Issue Categorization">
-    **Smart request routing**
-    
-    - Product questions → Product team
-    - Shipping issues → Logistics team
-    - Payment problems → Billing team
-    - Technical issues → Tech support
-    
-    *Gets customers to the right person faster*
-  </Tab>
-  
-  <Tab title="Priority Detection">
-    **Urgent request identification**
-    
-    - Time-sensitive orders (same-day shipping)
-    - High-value customer identification
-    - Repeat issue flagging
-    - Emergency keywords detection
-    
-    *Ensures urgent issues get immediate attention*
-  </Tab>
-  
-  <Tab title="Solution Suggestions">
-    **Self-help before escalation**
-    
-    - FAQ suggestions based on issue type
-    - Common solution recommendations
-    - Link to relevant help articles
-    - Video guides for complex topics
-    
-    *Resolves simple issues immediately*
-  </Tab>
-</Tabs>
+## What merchants receive
 
-## Customer experience design
+When customers submit support tickets, merchants get an email containing:
 
-<AccordionGroup>
-  <Accordion title="Seamless integration" icon="puzzle-piece">
-    **Feels like part of the portal**
-    
-    Support requests open within the same interface customers are already using. No new tabs, no separate login, no context switching.
-    
-    **Benefits:**
-    - Maintains customer focus
-    - Reduces abandonment
-    - Keeps order context visible
-    - Streamlines the help process
-  </Accordion>
-  
-  <Accordion title="Clear expectations" icon="clock">
-    **Response time transparency**
-    
-    Customers see exactly when to expect a response:
-    - "We'll respond within 2 hours during business hours"
-    - "Expect a callback within 30 minutes"
-    - "Live chat available now"
-    
-    **Benefits:**
-    - Sets realistic expectations
-    - Reduces repeat requests
-    - Builds trust in support process
-    - Allows customers to plan accordingly
-  </Accordion>
-  
-  <Accordion title="Multiple contact options" icon="comments">
-    **Customer choice in communication**
-    
-    Different customers prefer different support channels:
-    - Email for non-urgent, detailed issues
-    - Phone for complex problems needing discussion
-    - Chat for quick questions and real-time help
-    - Video call for technical demonstration needs
-    
-    **Benefits:**
-    - Accommodates communication preferences
-    - Increases customer satisfaction
-    - Improves resolution efficiency
-    - Reduces channel switching
-  </Accordion>
-  
-  <Accordion title="Status tracking" icon="list-check">
-    **Ticket progress visibility**
-    
-    Customers can see their support request status:
-    - "Ticket received and assigned"
-    - "Under review by our team"
-    - "Response sent - please check email"
-    - "Resolved - please confirm satisfaction"
-    
-    **Benefits:**
-    - Reduces "where is my response" calls
-    - Provides peace of mind
-    - Allows for better planning
-    - Improves overall experience
-  </Accordion>
-</AccordionGroup>
+- **Customer information** - name, email, phone (if provided)
+- **Order details** - direct link to the Shopify order
+- **Customer link** - direct link to customer profile in Shopify
+- **Help topic selected** - the reason category chosen by customer
+- **Customer message** - their specific description of the issue
+- **Automatic context** - no need to ask "what's your order number?"
 
-## Support scenarios that work well
-
-<Tabs>
-  <Tab title="Order Modifications">
-    **Complex changes beyond self-service**
-    
-    - Bulk quantity changes with custom pricing
-    - Product swaps not available in catalog
-    - Split shipments to multiple addresses
-    - Rush orders requiring special handling
-    
-    **Example:** *"I need to change 50 units to 75 units but want volume pricing"*
-  </Tab>
-  
-  <Tab title="Special Circumstances">
-    **Unique customer situations**
-    
-    - Medical device urgency
-    - Bereavement flowers timing
-    - Weather emergency preparations
-    - International customs issues
-    
-    **Example:** *"This is medical equipment needed for surgery on Friday"*
-  </Tab>
-  
-  <Tab title="Product Questions">
-    **Technical or compatibility inquiries**
-    
-    - Size and fit consultations
-    - Compatibility with existing equipment
-    - Custom configuration requirements
-    - Professional recommendations
-    
-    **Example:** *"Will this camera lens work with my existing equipment?"*
-  </Tab>
-  
-  <Tab title="Policy Clarifications">
-    **Understanding terms and conditions**
-    
-    - Return policy for specific situations
-    - Warranty coverage questions
-    - International shipping restrictions
-    - Volume pricing availability
-    
-    **Example:** *"What's the return policy if this doesn't fit properly?"*
-  </Tab>
-</Tabs>
-
-## Support team benefits
-
-<CardGroup cols={2}>
-  <Card title="Rich Context" icon="info-circle" color="#6366f1">
-    Support agents see full order history, previous edits, and customer journey before responding.
-  </Card>
-  <Card title="Smart Routing" icon="route" color="#10b981">
-    Tickets automatically go to the right department based on issue type and customer information.
-  </Card>
-  <Card title="Reduced Repetition" icon="undo" color="#8b5cf6">
-    Customers don't need to explain their order details - everything is already in the ticket.
-  </Card>
-  <Card title="Higher Resolution Rate" icon="check-circle" color="#ef4444">
-    More context leads to faster, more accurate problem resolution and fewer back-and-forth messages.
-  </Card>
-</CardGroup>
-
-## Integration with support systems
+## Configure support topics
 
 <Steps>
-  <Step title="CRM connection">
-    Support requests automatically create or update customer records in your CRM system.
+  <Step title="Access translations">
+    In your Revize app, go to **Translations > Customer Portal**.
   </Step>
-  <Step title="Help desk integration">
-    Tickets flow into Zendesk, Freshdesk, Intercom, or your existing support platform.
+  <Step title="Find support topics">
+    Navigate to the **Support Topics** section to see all available help reasons.
   </Step>
-  <Step title="Team notifications">
-    Relevant team members get notified about tickets that need their specific expertise.
+  <Step title="Customize topics">
+    Edit the predefined topics to match your business needs and common support requests.
   </Step>
-  <Step title="Resolution tracking">
-    Measure support performance and identify common issues that could become self-service features.
+  <Step title="Save changes">
+    Updated topics appear immediately in the customer portal support form.
   </Step>
 </Steps>
 
-## Common support requests
+**Default support topics include:**
+- "I want to change the shipping address"
+- "I want to update product quantity" 
+- "I want to add more products"
+- "I forgot to apply the discount code"
+- "I want to cancel the order"
+- "I want to upgrade the shipping method"
+- "Other"
+
+## Support ticket settings
 
 <AccordionGroup>
-  <Accordion title="Can't find the right option" icon="search">
-    **Self-service limitations**
+  <Accordion title="Enable support tickets" icon="toggle-on">
+    **Turn on the support feature**
     
-    - Product not showing in add-on options
-    - Shipping method not available for location
-    - Discount code not applying correctly
-    - Edit window expired but order not shipped
-    
-    **Support response:** Guide customer to available alternatives or make manual adjustments
+    Toggle on **Create support ticket** in your Order Editing settings to allow customers to contact support directly from their orders.
   </Accordion>
   
-  <Accordion title="Payment processing issues" icon="credit-card">
-    **Transaction problems**
+  <Accordion title="Extended availability option" icon="clock">
+    **Allow tickets after edit window closes**
     
-    - Card declined during edit process
-    - Payment authorization expired
-    - Refund not received as expected
-    - Different payment method needed
-    
-    **Support response:** Investigate payment status and provide alternative payment options
+    Enable **Allow customers to create support ticket after editing deadline** to let customers contact support even when they can no longer edit their orders.
   </Accordion>
   
-  <Accordion title="Shipping complications" icon="truck">
-    **Delivery challenges**
+  <Accordion title="Order hold option" icon="pause">
+    **Hold orders when tickets are created**
     
-    - Address not recognized by shipping system
-    - Special delivery instructions needed
-    - Carrier restrictions for product type
-    - International shipping documentation
-    
-    **Support response:** Work with logistics team to find delivery solution
-  </Accordion>
-  
-  <Accordion title="Product compatibility" icon="puzzle-piece">
-    **Technical questions**
-    
-    - Size and fit concerns
-    - Compatibility with existing purchases
-    - Custom configuration needs
-    - Professional use requirements
-    
-    **Support response:** Provide expert product guidance and recommendations
+    Enable **Hold order when a customer submits a support ticket** to automatically pause fulfillment until you can address their request.
   </Accordion>
 </AccordionGroup>
 
 ## Enable support tickets
 
 <Steps>
-  <Step title="Enable the feature">
-    In **Order Editing** settings, turn on **Support tickets** under Customer edit options.
+  <Step title="Open Order Editing settings">
+    In the Revize app, click **Order Editing** in the sidebar.
   </Step>
-  <Step title="Configure support routing">
-    Set up ticket categories and routing rules to direct requests to appropriate team members.
+  <Step title="Enable support tickets">
+    Toggle on **Create support ticket** and configure any additional options you need.
   </Step>
-  <Step title="Integrate support systems">
-    Connect with your existing help desk or CRM to ensure tickets flow into your support workflow.
+  <Step title="Customize topics (optional)">
+    Edit support topics under **Translations > Customer Portal > Support Topics** if needed.
   </Step>
-  <Step title="Set response expectations">
-    Configure automatic replies with realistic response timeframes based on your support capacity.
+  <Step title="Support tickets go live">
+    The contact support option appears in the Customer Portal for all orders.
   </Step>
 </Steps>
 
-## Measuring support success
+## Business benefits
 
 <CardGroup cols={2}>
-  <Card title="Resolution Time" icon="stopwatch" color="#10b981">
-    Track how quickly issues get resolved when customers have order context vs. traditional support tickets.
+  <Card title="Faster Resolution" icon="clock" color="#10b981">
+    Support requests include full order context, eliminating back-and-forth questions about order details.
   </Card>
-  <Card title="Customer Satisfaction" icon="star" color="#f59e0b">
-    Monitor CSAT scores for portal-initiated support requests vs. other support channels.
+  <Card title="Better Organization" icon="folder" color="#8b5cf6">
+    Predefined topics help categorize requests and route them to the right team members.
   </Card>
-  <Card title="Issue Patterns" icon="chart-bar" color="#8b5cf6">
-    Identify common support requests that could become new self-service features.
+  <Card title="Reduced Friction" icon="down" color="#f59e0b">
+    Customers can get help without leaving their order page or creating separate accounts.
   </Card>
-  <Card title="Channel Efficiency" icon="tachometer-alt" color="#ef4444">
-    Compare support channel performance to optimize routing and response processes.
+  <Card title="Professional Communication" icon="star" color="#ef4444">
+    Structured support requests with automatic notifications create a professional support experience.
   </Card>
 </CardGroup>
 
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="What information do I receive when customers create support tickets?" icon="envelope">
+    You receive an email with customer contact details, order link, customer profile link, selected help topic, and their specific message - everything needed to help them quickly.
+  </Accordion>
+
+  <Accordion title="Can customers create support tickets after the edit window closes?" icon="clock">
+    Yes, if you enable the "Allow customers to create support ticket after editing deadline" option. This lets customers contact support even when they can no longer edit orders.
+  </Accordion>
+
+  <Accordion title="How do I customize the support topics customers see?" icon="brush">
+    Go to **Translations > Customer Portal > Support Topics** to edit the predefined help reasons and match them to your business needs.
+  </Accordion>
+
+  <Accordion title="Do customers get confirmation when they submit tickets?" icon="check">
+    Yes, customers receive an immediate email confirmation that their support request was created and that you'll reach out soon.
+  </Accordion>
+
+  <Accordion title="Can I pause orders when customers create support tickets?" icon="pause">
+    Yes, enable "Hold order when a customer submits a support ticket" to automatically pause fulfillment until you can address their request.
+  </Accordion>
+</AccordionGroup>
+
 <Note>
-  Support tickets provide the safety net that makes customers comfortable using self-service features. Enable this to handle edge cases gracefully while maintaining excellent customer experience.
+  Support tickets bridge the gap between self-service editing and human help. Enable this feature to provide professional customer service while maintaining full order context.
 </Note>
 
-## Related features
+## Related Revize features
 
-- [Customer Portal](/features/customer-portal) — where customers access support options
-- [Analytics](/features/analytics) — track support ticket patterns and resolution rates
-- [Customization](/customization/notifications) — configure support request confirmations and responses
+- [Customer Portal](/features/customer-portal) — where customers access support ticket creation
+- [Edit Window Settings](/setup/edit-window) — configure when support tickets can be created
+- [Order Processing](/setup/order-processing) — manage order holds when tickets are submitted

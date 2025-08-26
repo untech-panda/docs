@@ -1,26 +1,26 @@
 ---
 title: "Cancel Order"
-description: "Give customers a simple way to cancel orders after checkout with automatic refunds. Control cancellation policies, refund methods, and timing to protect your business."
+description: "Let Shopify customers cancel orders themselves with automatic refunds. Reduce support tickets and improve customer experience with self-service order cancellation from the customer portal."
 ---
 
-<Info>
-  Sometimes customers need to cancel orders entirely. Make it easy while protecting your operations with smart cancellation policies and refund controls.
-</Info>
+<Note>
+  Order mistakes happen. Instead of forcing customers to contact support, let them cancel orders themselves with instant refunds to original payment or store credit.
+</Note>
 
-## Why offer order cancellation
+## Why self-service order cancellation matters
 
 <CardGroup cols={2}>
-  <Card title="Prevent Chargebacks" icon="shield-exclamation" color="#ef4444">
-    Self-service cancellations with proper refunds prevent disputes and chargebacks from frustrated customers.
+  <Card title="Reduce Support Tickets" icon="headphones" color="#ef4444">
+    Customers handle cancellations themselves instead of calling or emailing your support team.
   </Card>
-  <Card title="Reduce Support Burden" icon="headphones" color="#8b5cf6">
-    Customers cancel their own orders instead of calling or emailing for cancellation requests.
+  <Card title="Improve Customer Experience" icon="user-check" color="#10b981">
+    Instant self-service cancellation is faster and more convenient than waiting for support responses.
   </Card>
-  <Card title="Better Customer Experience" icon="heart" color="#10b981">
-    Graceful cancellation shows you respect customer choice and builds long-term trust.
+  <Card title="Automatic Refund Processing" icon="credit-card" color="#8b5cf6">
+    Refunds process automatically through Shopify without manual intervention from your team.
   </Card>
-  <Card title="Operational Control" icon="settings" color="#f59e0b">
-    Set cancellation deadlines that align with your fulfillment process to avoid picking canceled orders.
+  <Card title="Inventory Management" icon="warehouse" color="#f59e0b">
+    Cancelled items are automatically restocked and available for new orders immediately.
   </Card>
 </CardGroup>
 
@@ -28,258 +28,177 @@ description: "Give customers a simple way to cancel orders after checkout with a
 
 <Steps>
   <Step title="Access cancellation option">
-    From the Customer Portal, customer clicks **Cancel order** to start the cancellation process.
+    From the Revize Customer Portal, customers click **Cancel order** to start the cancellation process.
   </Step>
-  <Step title="Review cancellation details">
-    See refund amount, refund method (original payment or store credit), and timing expectations.
+  <Step title="Select cancellation reason">
+    Choose from predefined reasons like "Changed my mind," "Found better price," or type a custom reason.
   </Step>
   <Step title="Confirm cancellation">
-    Click **Cancel order** to confirm. Customer cannot undo this action once confirmed.
+    Click **Cancel order** to process the cancellation and automatic refund through Shopify.
   </Step>
-  <Step title="Receive refund">
-    Refund processes automatically according to your [payment settings](/setup/payments-and-refunds), with confirmation notifications.
-  </Step>
-</Steps>
-
-## Cancellation timing options
-
-<Tabs>
-  <Tab title="Within Edit Window">
-    **Cancellations allowed during editing period**
-    
-    - Same timing as other order edits
-    - Usually 15 minutes to few hours after checkout
-    - Prevents cancellation after fulfillment starts
-    
-    *Most common and safest approach*
-  </Tab>
-  
-  <Tab title="Until Fulfillment">
-    **Cancel anytime before shipping**
-    
-    - Available until order status changes to "Fulfilled"
-    - Requires tight integration with fulfillment process
-    - Higher risk of canceling orders already being picked
-    
-    *For advanced fulfillment workflows*
-  </Tab>
-  
-  <Tab title="Custom Deadlines">
-    **Specific cancellation cutoffs**
-    
-    - Different timing from other edits
-    - Matches your pick/pack schedule
-    - Can be shorter or longer than edit window
-    
-    *Tailored to your operations*
-  </Tab>
-  
-  <Tab title="No Cancellations">
-    **Cancellations not allowed**
-    
-    - All sales final after checkout
-    - Customers must contact support for special cases
-    - Reduces operational complexity
-    
-    *For very fast fulfillment or special products*
-  </Tab>
-</Tabs>
-
-## Refund options
-
-<AccordionGroup>
-  <Accordion title="Original payment method" icon="credit-card">
-    **Full refund to original payment**
-    
-    - Credit card, PayPal, or other payment method used at checkout
-    - Refund processing takes 3-5 business days typically
-    - Customer receives full order amount including tax
-    - Shipping costs may be refunded or retained based on your policy
-    
-    **Best for:** Building customer trust and handling genuine mistakes
-  </Accordion>
-  
-  <Accordion title="Store credit" icon="gift-card">
-    **Refund as store credit or gift card**
-    
-    - Instant refund value available immediately
-    - Keeps revenue within your business
-    - May offer bonus percentage for choosing store credit
-    - Works well for repeat customers
-    
-    **Best for:** Encouraging future purchases and retaining revenue
-  </Accordion>
-  
-  <Accordion title="Partial refunds" icon="percentage">
-    **Refund minus restocking or processing fees**
-    
-    - Deduct fixed fee or percentage from refund
-    - Covers payment processing costs and handling
-    - Clear fee disclosure before customer confirms cancellation
-    - Helps offset operational costs
-    
-    **Best for:** High-volume businesses with tight margins
-  </Accordion>
-  
-  <Accordion title="No refund" icon="ban">
-    **Cancellation without refund (store credit only)**
-    
-    - Customer cancels but keeps value as store credit
-    - Prevents financial loss from cancellations
-    - Must be clearly disclosed at checkout and during cancellation
-    - May reduce customer satisfaction
-    
-    **Best for:** Specialty products or very fast fulfillment scenarios**
-  </Accordion>
-</AccordionGroup>
-
-## Customer experience design
-
-<CardGroup cols={2}>
-  <Card title="Clear Consequences" icon="exclamation-triangle" color="#f59e0b">
-    Customers see exactly what cancellation means: refund amount, timing, and method before confirming.
-  </Card>
-  <Card title="No Takebacks" icon="lock" color="#ef4444">
-    Once confirmed, cancellations process immediately. Make this clear to prevent accidental cancellations.
-  </Card>
-  <Card title="Reason Tracking" icon="clipboard-list" color="#8b5cf6">
-    Optional cancellation reason collection helps you understand why customers cancel.
-  </Card>
-  <Card title="Alternative Offers" icon="lightbulb" color="#10b981">
-    Before final cancellation, suggest order changes that might address customer concerns.
-  </Card>
-</CardGroup>
-
-## Cancellation alternatives
-
-Before customers cancel completely, consider offering:
-
-<Tabs>
-  <Tab title="Order Changes">
-    **Fix the underlying issue**
-    
-    - "Need different size? Swap it instead of canceling"
-    - "Wrong color? Change it in one click"
-    - "Too expensive? Remove some items instead"
-    
-    *Turn cancellations into edits*
-  </Tab>
-  
-  <Tab title="Shipping Adjustments">
-    **Address delivery concerns**
-    
-    - "Need it faster? Upgrade to express shipping"
-    - "Changed address? Update shipping destination"
-    - "Delivery timing issue? Schedule a better date"
-    
-    *Solve logistics problems*
-  </Tab>
-  
-  <Tab title="Discounts or Credits">
-    **Provide financial incentives**
-    
-    - "Stay with your order, get 10% off"
-    - "Free shipping upgrade instead of canceling"
-    - "Store credit bonus for keeping your order"
-    
-    *Add value to retain the sale*
-  </Tab>
-  
-  <Tab title="Support Contact">
-    **Human intervention option**
-    
-    - "Need help with something specific? Contact support"
-    - "Special circumstances? Let us help you"
-    - "Questions about your order? Chat with us"
-    
-    *Bridge to personal service*
-  </Tab>
-</Tabs>
-
-## Operational considerations
-
-<AccordionGroup>
-  <Accordion title="Fulfillment integration" icon="truck">
-    **Prevent shipping canceled orders**
-    
-    Canceled orders must immediately:
-    - Remove from pick lists and fulfillment queues
-    - Update inventory allocation
-    - Notify 3PL or warehouse management system
-    - Stop any automated shipping processes
-  </Accordion>
-  
-  <Accordion title="Inventory management" icon="boxes">
-    **Return items to available stock**
-    
-    When orders are canceled:
-    - Products return to sellable inventory immediately
-    - Inventory counts update across all sales channels
-    - Reserved stock allocations are released
-    - Back-in-stock notifications can be triggered
-  </Accordion>
-  
-  <Accordion title="Payment processing" icon="credit-card">
-    **Handle refunds properly**
-    
-    Refund processing involves:
-    - Immediate authorization void (if within window)
-    - Standard refund processing (takes 3-5 days)
-    - Payment gateway fee implications
-    - Store credit issuance for alternative refunds
-  </Accordion>
-  
-  <Accordion title="Customer communication" icon="envelope">
-    **Clear status updates**
-    
-    Customers should receive:
-    - Instant cancellation confirmation
-    - Refund processing notifications
-    - Expected refund timing
-    - Order status page updates
-  </Accordion>
-</AccordionGroup>
-
-## Configure cancellation settings
-
-<Steps>
-  <Step title="Enable order cancellation">
-    In **Order Editing** settings, turn on **Cancel order** under Customer edit options.
-  </Step>
-  <Step title="Set cancellation timing">
-    Choose when cancellations are allowed - same as edit window, until fulfillment, or custom timing.
-  </Step>
-  <Step title="Configure refund method">
-    Select original payment, store credit, partial refund, or no refund based on your business model.
-  </Step>
-  <Step title="Add reason tracking">
-    Optionally collect cancellation reasons to understand patterns and improve your business.
+  <Step title="Instant confirmation">
+    Order status updates immediately and refund processes according to your configured settings.
   </Step>
 </Steps>
 
-## Managing cancellation impact
+## Configure order cancellation refunds
 
-<CardGroup cols={2}>
-  <Card title="Monitor Cancellation Rates" icon="chart-line" color="#ef4444">
-    Track cancellation percentage to identify issues with products, pricing, or customer expectations.
-  </Card>
-  <Card title="Analyze Cancellation Reasons" icon="search" color="#8b5cf6">
-    Use reason data to address common problems: sizing issues, shipping costs, or product descriptions.
-  </Card>
-  <Card title="Optimize Checkout Process" icon="shopping-cart" color="#10b981">
-    Reduce cancellations by improving product information, sizing guides, and shipping options.
-  </Card>
-  <Card title="Retention Strategies" icon="heart" color="#f59e0b">
-    Follow up with canceled customers via email to address concerns and win back future orders.
-  </Card>
-</CardGroup>
+<AccordionGroup>
+  <Accordion title="Refund to original payment method" icon="credit-card">
+    **Full refunds through Shopify's payment system**
+    
+    When customers cancel orders, Revize automatically issues a full refund back to their original payment method:
+    
+    - **Credit cards** - refund appears in 3-5 business days
+    - **PayPal** - instant refund to PayPal account  
+    - **Digital wallets** - Apple Pay, Google Pay refunds process automatically
+    - **Buy now, pay later** - refunds through Klarna, Afterpay, etc.
+    
+    <Note>
+      This option provides the most familiar experience for customers who expect traditional refunds.
+    </Note>
+  </Accordion>
+  
+  <Accordion title="Store credit refunds" icon="gift">
+    **Convert cancellations into future purchases**
+    
+    Issue store credit instead of cash refunds to retain revenue and encourage repeat purchases:
+    
+    - **Customer loyalty** - keeps money in your ecosystem
+    - **Higher lifetime value** - store credit often leads to larger future orders
+    - **Reduced processing fees** - no payment processor refund fees
+    - **Instant availability** - credit is available immediately for next purchase
+    
+    Perfect for building customer loyalty while protecting your cash flow.
+  </Accordion>
+  
+  <Accordion title="No refund policy" icon="ban">
+    **Block cancellations with no refund option**
+    
+    If you select "No refund" in your [payments and refunds settings](/setup/payments-and-refunds):
+    
+    - **Cancellation option disappears** - customers won't see the cancel button
+    - **Clear policy enforcement** - aligns with strict no-refund business policies
+    - **Revenue protection** - prevents revenue loss from cancellations
+    
+    Use this for final sale items, custom products, or strict business policies.
+  </Accordion>
+</AccordionGroup>
+
+## Customizable cancellation reasons
+
+<Tip>
+  **Customize cancellation reasons:** Edit the predefined cancellation reasons under **Translations > Customer Portal > Cancellation Reasons** to match your business needs.
+</Tip>
+
+**Default cancellation reasons include:**
+- "Changed my mind"
+- "Found a better price elsewhere"  
+- "Ordered by mistake"
+- "Delivery too slow"
+- "Product no longer needed"
+- "Custom reason" (allows customers to type their own)
+
+**Why collect cancellation reasons:**
+- Identify common issues with your products or checkout process
+- Improve your store based on customer feedback
+- Track trends in cancellation patterns
+- Provide better customer service insights
 
 <Note>
-  Order cancellation is a customer service necessity that, when done well, builds trust even when customers don't complete their purchase. Enable it with the right policies to protect both customer experience and your operations.
+  **Track cancellation analytics:** View cancellation data, cost savings, and customer reasons under **Analytics** in your Revize dashboard. For custom reasons analysis, contact support - detailed custom reason reporting will be available on the dashboard soon.
 </Note>
 
-## Related features
+## Control cancellation availability
+
+<AccordionGroup>
+  <Accordion title="Hide cancellation by order tags" icon="tag">
+    **Restrict cancellations for specific orders**
+    
+    Use [order edit restrictions](/setup/order-edit-restrictions) to hide the cancel option for certain orders:
+    
+    - **High-risk orders** - prevent cancellation of flagged orders
+    - **Custom products** - block cancellation of personalized items
+    - **Wholesale orders** - different policies for B2B customers
+    - **Final sale items** - enforce no-cancellation policies
+    
+    Simply tag orders with your restriction tags and the cancel option won't appear. You'll need to contact support (hello@revize.app) to set edit restrictions specifically for cancellation.
+  </Accordion>
+</AccordionGroup>
+
+## Enable order cancellation
+
+<Steps>
+  <Step title="Configure refund method">
+    First, set your refund policy in **Order Editing > Refund options**. Choose original payment or store credit.
+  </Step>
+  <Step title="Enable cancellation feature">
+    In **Order Editing > Customer edit options**, toggle on **Cancel order** and click **Save**.
+  </Step>
+  <Step title="Customize reasons (optional)">
+    Edit cancellation reasons under **Translations > Customer Portal > Scroll down to Cancellation Reasons** to match your business needs.
+  </Step>
+  <Step title="Set restrictions (optional)">
+    Use [order tags](/setup/order-edit-restrictions) to hide cancellation for specific order types if needed.
+  </Step>
+</Steps>
+
+## Business benefits
+
+<CardGroup cols={2}>
+  <Card title="Lower Support Costs" icon="dollar-sign" color="#10b981">
+    Reduce support ticket volume by 30-50% when customers handle their own cancellations.
+  </Card>
+  <Card title="Faster Resolution" icon="bolt" color="#8b5cf6">
+    Instant cancellations vs. hours or days waiting for support team response.
+  </Card>
+  <Card title="Better Customer Satisfaction" icon="heart" color="#ef4444">
+    Self-service options increase customer satisfaction and reduce frustration.
+  </Card>
+  <Card title="Operational Efficiency" icon="chart-line" color="#f59e0b">
+    Automatic inventory restocking and refund processing eliminates manual work.
+  </Card>
+</CardGroup>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="How do customers cancel orders in Revize?" icon="question">
+    Customers click "Cancel order" in their Revize portal, select a cancellation reason, and confirm the cancellation. The refund processes automatically according to your configured settings.
+  </Accordion>
+
+  <Accordion title="What happens to inventory when orders are cancelled?" icon="warehouse">
+    Cancelled items are automatically restocked in Shopify inventory and become available for new orders immediately. No manual restocking required.
+  </Accordion>
+
+  <Accordion title="Can I prevent certain orders from being cancelled?" icon="shield">
+    Yes, use [order edit restrictions](/setup/order-edit-restrictions) with order tags to hide the cancellation option for specific orders like custom products, wholesale orders, or high-risk orders.
+  </Accordion>
+
+  <Accordion title="How are refunds processed for cancelled orders?" icon="credit-card">
+    Refunds are processed automatically through Shopify according to your [payments and refunds settings](/setup/payments-and-refunds) - either to the original payment method or as store credit.
+  </Accordion>
+
+  <Accordion title="Can customers cancel orders after the edit window closes?" icon="clock">
+    No, order cancellation follows your [edit window settings](/setup/edit-window). Once the edit window closes, the cancellation option disappears and orders move to fulfillment.
+  </Accordion>
+
+  <Accordion title="Can I customize the cancellation reasons customers see?" icon="palette">
+    Yes, edit cancellation reasons under **Translations > Customer Portal > Scroll down to Cancellation Reasons** to match your business needs and collect relevant feedback.
+  </Accordion>
+
+  <Accordion title="What if I have a no-refund policy?" icon="ban">
+    If you select "No refund" in your payments settings, the cancellation option won't appear in the customer portal, automatically enforcing your no-refund policy.
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  Self-service order cancellation reduces support workload while providing customers with instant resolution. Enable this feature to improve customer experience and operational efficiency.
+</Note>
+
+## Related Revize features
 
 - [Customer Portal](/features/customer-portal) — where customers access cancellation options
 - [Payments & Refunds](/setup/payments-and-refunds) — configure how cancellation refunds are processed
-- [Edit Window](/setup/edit-window) — control timing for cancellations and other edits
+- [Order Edit Restrictions](/setup/order-edit-restrictions) — control which orders can be cancelled
+- [Edit Window Settings](/setup/edit-window) — set cancellation deadlines

@@ -34,6 +34,37 @@ description: "Choose how Revize handles price changes during order edits. Let cu
 **Price increases:** Revize shows a Pay now button and securely collects the difference through Shopify.  
 **Price decreases:** Revize follows the refund option you choose below.
 
+### Customer payment widgets
+
+When order totals change, customers see clear widgets explaining the price difference and next steps:
+
+<Frame>
+  <img
+    src="/images/setup/pay-now.png"
+    alt="Pay now widget when order total increases"
+    style={{ borderRadius: "12px", width: "100%", boxShadow: "0 4px 14px rgba(0,0,0,0.08)" }}
+  />
+  <small>Pay now widget appears when edits increase the order total.</small>
+</Frame>
+
+<Frame>
+  <img
+    src="/images/setup/refund-now.png"
+    alt="Refund widget when order total decreases"
+    style={{ borderRadius: "12px", width: "100%", boxShadow: "0 4px 14px rgba(0,0,0,0.08)" }}
+  />
+  <small>Refund widget shows when edits reduce the order total.</small>
+</Frame>
+
+<Frame>
+  <img
+    src="/images/setup/confirm-now.png"
+    alt="Confirm widget for same-price changes"
+    style={{ borderRadius: "12px", width: "100%", boxShadow: "0 4px 14px rgba(0,0,0,0.08)" }}
+  />
+  <small>Confirm widget appears when changes don't affect the order total.</small>
+</Frame>
+
 ## Your refund options
 
 <CardGroup cols={2}>
@@ -94,7 +125,7 @@ description: "Choose how Revize handles price changes during order edits. Let cu
 <CardGroup cols={2}>
   <Card title="New stores" icon="seedling" color="#22c55e">
     <strong>Start with:</strong> Refund to original payment.  
-    It’s simple for customers and easy to support. You can switch to store credit later.
+    It's simple for customers and easy to support. You can switch to store credit later.
   </Card>
   <Card title="Established brands" icon="trophy" color="#f59e0b">
     <strong>Consider:</strong> Refund as store credit.  
@@ -108,8 +139,8 @@ description: "Choose how Revize handles price changes during order edits. Let cu
 
 ## Related setup
 
-- [Edit window](/setup/edit-window), control how long customers can edit  
-- [Order processing](/setup/order-processing), hold during editing or flow with release tags  
-- [Customer edit options](/setup/edit-permissions), decide what shoppers can change
+- [Edit window](/setup/edit-window) — control how long customers can edit  
+- [Order processing](/setup/order-processing) — hold during editing or flow with release tags  
+- [Customer edit options](/setup/edit-permissions) — decide what shoppers can change
 
 <small>Want to see Pay now, Refund, and Confirm in action? Follow the steps in <a href="/how-to-test-revize">How to Test Revize</a>.</small>
