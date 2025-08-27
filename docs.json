@@ -82,11 +82,6 @@
           "icon": "cart-plus"
         },
         {
-          "anchor": "Support",
-          "href": "javascript:Intercom('show')",
-          "icon": "life-ring"
-        },
-        {
           "anchor": "Book demo",
           "href": "https://cal.com/revize-team-xx92ri/30min?overlayCalendar=true",
           "icon": "calendar-days"
@@ -100,7 +95,6 @@
   },
   "navbar": {
     "links": [
-      { "label": "Support", "href": "javascript:Intercom('show')"},
       { "label": "Book demo", "href": "https://cal.com/revize-team-xx92ri/30min?overlayCalendar=true" }
     ],
     "primary": {

@@ -15,10 +15,10 @@ description: 'Need help with Revize? Reach us by email, live chat, or through ou
 
     Send us an email anytime. Typical response time: within a few hours on business days.
   </Card>
-  <Card title="Live Chat" icon="comments" color="#3b82f6" href="javascript:Intercom('show')">
+  <Card title="Live Chat" icon="comments" color="#3b82f6" onClick={() => window.Intercom && window.Intercom('show')} style={{ cursor: 'pointer' }}>
     **In-app & on website**
 
-    Chat with us directly inside the Revize app or at [revize.app](https://www.revize.app).
+    Chat with us directly here by clicking the chat icon in the bottom right corner of the page.
   </Card>
 </CardGroup>
 
