@@ -8,6 +8,11 @@
     "dark": "#4F46E5"
   },
   "favicon": "/favicon.png",
+  "integrations": {
+    "intercom": {
+      "appId": "zdw5s9rq"
+    }
+  },
   "navigation": {
     "tabs": [
       {
@@ -49,13 +54,6 @@
               "features/support-tickets",
               "features/analytics"
             ]
-          },
-          {
-            "group": "Changelog",
-            "icon": "newspaper",
-            "pages": [
-              "changelog/overview"
-            ]
           }
         ]
       },
@@ -85,7 +83,7 @@
         },
         {
           "anchor": "Support",
-          "href": "mailto:hello@revize.app",
+          "href": "javascript:Intercom('show')",
           "icon": "life-ring"
         },
         {
@@ -102,7 +100,7 @@
   },
   "navbar": {
     "links": [
-      { "label": "Support", "href": "mailto:hello@revize.app" },
+      { "label": "Support", "href": "javascript:Intercom('show')"},
       { "label": "Book demo", "href": "https://cal.com/revize-team-xx92ri/30min?overlayCalendar=true" }
     ],
     "primary": {
@@ -116,8 +114,8 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/revizeapp",
-      "linkedin": "https://linkedin.com/company/revize"
+      "x": "https://x.com/revizenow",
+      "linkedin": "https://linkedin.com/company/revize-app"
     }
   },
   "icons": {
