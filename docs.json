@@ -82,7 +82,7 @@
           "icon": "cart-plus"
         },
         {
-          "anchor": "Book demo",
+          "anchor": "Book Demo",
           "href": "https://cal.com/revize-team-xx92ri/30min?overlayCalendar=true",
           "icon": "calendar-days"
         }
@@ -95,7 +95,7 @@
   },
   "navbar": {
     "links": [
-      { "label": "Book demo", "href": "https://cal.com/revize-team-xx92ri/30min?overlayCalendar=true" }
+      { "label": "Book Demo", "href": "https://cal.com/revize-team-xx92ri/30min?overlayCalendar=true" }
     ],
     "primary": {
       "type": "button",
